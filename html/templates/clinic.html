@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Clinic - Muse Documentation | Muse - Responsive Website Template </title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/flatpickr/dist/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="bg-gray-100 clinic-template">
+
+<!-- RTL Button -->
+<div class="badge badge-primary rounded-pill p-3 muze-hamburger position-fixed bottom-0 mb-3 mx-3 end-0 z-index10" id="RTLMode"><span class="me-2 rtl-text">RTL</span><div class="mb-0 form-check form-switch">
+  <input class="form-check-input me-0" type="checkbox" id="flexSwitchCheckDefault"></div><span class="ltr-text">LTR</span></div>
+
+<!-- Muse Header, Py Sm 2 -->
+<header class="muse-header py-sm-2">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="../templates/index.html">
+        <img src="../../assets/svg/brand/logo.svg" alt="Muse">
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="menu-icon" data-name="icons/tabler/hamburger" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <rect data-name="Icons/Tabler/Hamburger background" width="16" height="16" fill="none"/>
+          <path d="M15.314,8H.686A.661.661,0,0,1,0,7.368a.653.653,0,0,1,.593-.625l.093-.006H15.314A.661.661,0,0,1,16,7.368a.653.653,0,0,1-.593.626Zm0-6.737H.686A.661.661,0,0,1,0,.632.654.654,0,0,1,.593.005L.686,0H15.314A.661.661,0,0,1,16,.632a.653.653,0,0,1-.593.625Z" transform="translate(0 4)" fill="#1e1e1e"/>
+        </svg>          
+        <svg class="menu-close" data-name="icons/tabler/close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <rect data-name="Icons/Tabler/Close background" width="16" height="16" fill="none"/>
+          <path d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z" transform="translate(2 2)" fill="#1e1e1e"/>
+        </svg>          
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item dropdown horizontal-menu">
+            <a class="nav-link active" href="javascript:void(0)" role="button" id="landing" data-bs-toggle="dropdown" aria-expanded="false">Landing <svg class="ms-1" data-name="icons/tabler/chevron down" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+                <rect data-name="Icons/Tabler/Chevron Down background" width="16" height="16" fill="none"/>
+                <path d="M.264.26A.909.909,0,0,1,1.435.174l.1.086,7.2,7.111a.881.881,0,0,1,.087,1.157l-.087.1-7.2,7.111a.908.908,0,0,1-1.273,0,.881.881,0,0,1-.087-1.157l.087-.1L6.827,8,.264,1.517A.881.881,0,0,1,.176.36Z" transform="translate(16 4) rotate(90)" fill="#1e1e1e"/>
+              </svg>
+            </a>
+            <ul class="dropdown-menu shadow-lg" aria-labelledby="single">
+              <li>
+                <ul>
+                  <li><a class="dropdown-item" href="../templates/saas-style-one.html">Saas style one</a></li>
+                  <li><a class="dropdown-item" href="../templates/saas-style-two.html">Saas style two</a></li>
+                  <li><a class="dropdown-item" href="../templates/saas-style-three.html">Saas style three</a></li>
+                  <li><a class="dropdown-item" href="../templates/dashboard.html">Dashboard light</a></li>
+                  <li><a class="dropdown-item" href="../templates/dashboard-dark.html">Dashboard dark</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a class="dropdown-item" href="../templates/education.html">Education <span class="badge badge-primary fs-11 py-1 px-2 ms-1 rounded text-uppercase">New</span></a></li>
+                  <li><a class="dropdown-item" href="../templates/portfolio.html">Portfolio</a></li>
+                  <li><a class="dropdown-item" href="../templates/travel.html">Travel</a></li>
+                  <li><a class="dropdown-item" href="../templates/agency.html">Agency</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a class="dropdown-item" href="../templates/studio.html">Studio</a></li>
+                  <li><a class="dropdown-item" href="../templates/ecommerce.html">Ecommerce</a></li>
+                  <li><a class="dropdown-item" href="../templates/clinic.html">Clinic</a></li>
+                  <li><a class="dropdown-item" href="../templates/magazine.html">News</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown horizontal-menu">
+            <a class="nav-link" href="javascript:void(0)" role="button" id="single" data-bs-toggle="dropdown" aria-expanded="false">Pages <svg class="ms-1" data-name="icons/tabler/chevron down" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+              <rect data-name="Icons/Tabler/Chevron Down background" width="16" height="16" fill="none"/>
+              <path d="M.264.26A.909.909,0,0,1,1.435.174l.1.086,7.2,7.111a.881.881,0,0,1,.087,1.157l-.087.1-7.2,7.111a.908.908,0,0,1-1.273,0,.881.881,0,0,1-.087-1.157l.087-.1L6.827,8,.264,1.517A.881.881,0,0,1,.176.36Z" transform="translate(16 4) rotate(90)" fill="#1e1e1e"/>
+            </svg></a>
+            <ul class="dropdown-menu shadow-lg" aria-labelledby="single">
+              <li>
+                <small class="d-block">Jobs</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/job-opening.html">Opening</a></li>
+                  <li><a class="dropdown-item" href="../pages/job-listing.html">Listing</a></li>
+                </ul>
+                <small class="d-block">Misc</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/404.html">404</a></li>
+                  <li><a class="dropdown-item" href="../pages/coming-soon.html">Coming soon</a></li>
+                  <li><a class="dropdown-item" href="../pages/maintenance.html">Maintenance</a></li>
+                </ul>
+              </li>
+              <li>
+                <small class="d-block">Company</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/help-center.html">Help Center</a></li>
+                  <li><a class="dropdown-item" href="../pages/pricing.html">Pricing</a></li>
+                  <li><a class="dropdown-item" href="../pages/about-style1.html">About <span class="badge badge-primary fs-11 py-1 px-2 ms-1 rounded text-uppercase">New</span></a></li>
+                  <li><a class="dropdown-item" href="../pages/contact.html">Contact</a></li>
+                  <li><a class="dropdown-item" href="../pages/legal.html">Legal</a></li>
+                </ul>
+              </li>
+              <li>
+                <small class="d-block">Account</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/account-profile.html">General</a></li>
+                  <li><a class="dropdown-item" href="../pages/account-payment.html">Payments</a></li>
+                  <li><a class="dropdown-item" href="../pages/account-friends.html">Friends</a></li>
+                  <li><a class="dropdown-item" href="../pages/account-security.html">Security</a></li>
+                </ul>
+              </li>
+              <li>
+                <small class="d-block">Login</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/login.html">Cover</a></li>
+                  <li><a class="dropdown-item" href="../pages/login-simple.html">Simple</a></li>
+                </ul>
+                <small class="d-block">Gallery</small>
+                <ul>
+                  <li><a class="dropdown-item" href="../pages/gallery-mansorny.html">Mansorny</a></li>
+                  <li><a class="dropdown-item" href="../pages/grid-gallery.html">Grid</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="javascript:void(0)" role="button" id="dashboard" data-bs-toggle="dropdown" aria-expanded="false">Blog <svg class="ms-1" data-name="icons/tabler/chevron down" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+              <rect data-name="Icons/Tabler/Chevron Down background" width="16" height="16" fill="none"/>
+              <path d="M.264.26A.909.909,0,0,1,1.435.174l.1.086,7.2,7.111a.881.881,0,0,1,.087,1.157l-.087.1-7.2,7.111a.908.908,0,0,1-1.273,0,.881.881,0,0,1-.087-1.157l.087-.1L6.827,8,.264,1.517A.881.881,0,0,1,.176.36Z" transform="translate(16 4) rotate(90)" fill="#1e1e1e"/>
+            </svg></a>
+            <ul class="dropdown-menu shadow-lg" aria-labelledby="dashboard">
+              <li><a class="dropdown-item" href="../blog/blog-home1.html">Home 01</a></li>
+              <li><a class="dropdown-item" href="../blog/blog-home2.html">Home 02 <span class="badge badge-primary fs-11 py-1 px-2 ms-1 rounded text-uppercase">New</span></a></li>
+              <li><a class="dropdown-item" href="../blog/blog-post-sidebar.html">Post 01</a></li>
+              <li><a class="dropdown-item" href="../blog/blog-post.html">Post 02</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="javascript:void(0)" role="button" id="docs" data-bs-toggle="dropdown" aria-expanded="false">Docs <svg class="ms-1" data-name="icons/tabler/chevron down" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+              <rect data-name="Icons/Tabler/Chevron Down background" width="16" height="16" fill="none"/>
+              <path d="M.264.26A.909.909,0,0,1,1.435.174l.1.086,7.2,7.111a.881.881,0,0,1,.087,1.157l-.087.1-7.2,7.111a.908.908,0,0,1-1.273,0,.881.881,0,0,1-.087-1.157l.087-.1L6.827,8,.264,1.517A.881.881,0,0,1,.176.36Z" transform="translate(16 4) rotate(90)" fill="#1e1e1e"/>
+            </svg></a>
+            <ul class="dropdown-menu shadow-lg" aria-labelledby="docs">
+              <li><a class="dropdown-item" href="../../documentation/index.html">Documentation</a></li>
+              <li><a class="dropdown-item" href="../../snippets/index.html">Snippets <span class="badge badge-primary fs-11 py-1 px-2 ms-1 rounded text-uppercase">Build</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="../pages/pricing.html" class="btn btn-lg btn-primary my-3 my-lg-0">Buy Now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <!-- Muse Section, Pb 0 -->
+  <section class="muse-section pb-0">
+    <div class="row align-items-center">
+      <div class="col-lg-10 m-auto text-center">
+        <div class="my-3">
+          <h1 class="display-3">Consult with the <br>right doctor for you</h1>
+          <h3 class="mb-0">Search 14,600 doctors and find <br>the perfect help.</h3>
+        </div>
+        <div class="mt-3" data-aos="fade-up" data-aos-delay="100">
+          <img src="../../assets/img/templates/clinic-banner.svg" class="img-fluid" alt="Banner">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="bg-white">
+  <div class="container">
+
+    <!-- Muse Section -->
+    <section class="muse-section">
+      <div class="rounded-6 overflow-hidden">
+        <div class="row g-0">
+          <div class="order-lg-2 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pt-md-5 pt-4 pb-4 px-4 bg-blue-300 h-100">
+              <div class="px-lg-3 d-flex flex-column h-100 pb-2">
+                <h5 class="text-white mb-3">Appointments</h5>
+                <p class="text-white lh-lg">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.</p>
+                <div class="mt-auto text-lg-center">
+                  <a href="javascript:void(0)" class="btn btn-outline-light">Book now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-lg-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pt-md-5 pt-4 pb-4 px-4 bg-cyan-500 h-100">
+              <div class="px-lg-3 d-flex flex-column h-100 pb-2">
+                <h5 class="text-white mb-3">Emergency</h5>
+                <p class="text-white lh-auto mb-2">Our emergency services are available 24/7 in all areas</p>
+                <a href="tel:1233326359" class="text-white fs-20 mb-3">+(123 332 6359)</a>
+                <div class="mt-auto text-lg-center">
+                  <a href="tel:1233326359" class="btn btn-outline-light">Call now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-lg-1 col-lg-4 col-md-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="py-md-5 py-4 px-4 bg-blue-400 h-100">
+              <div class="px-lg-3 pb-2">
+                <h5 class="text-white">Opening Hours</h5>
+                <ul class="hours-list mb-0">
+                  <li>
+                    <span>Mon - Wed</span>
+                    <span class="ms-auto">16:00 - 10 pm</span>
+                  </li>
+                  <li>
+                    <span>Thursday</span>
+                    <span class="ms-auto">1:00 - 3 pm</span>
+                  </li>
+                  <li>
+                    <span>Friday</span>
+                    <span class="ms-auto">2:00 - 5 pm</span>
+                  </li>
+                  <li>
+                    <span>Sat - Sun</span>
+                    <span class="ms-auto">Closed</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Muse Section -->
+    <section class="muse-section">
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <div class="pe-lg-4">
+            <h2 class="h1">We care about your wellbeing</h2>
+            <ul class="number-list pt-1">
+              <li>
+                <div><small class="circle circle-lg">1</small></div>
+                <span>Top of the line equipment and tools</span>
+              </li>
+              <li>
+                <div><small class="circle circle-lg">2</small></div>
+                <span>Leading doctors and nurses in the industry</span>
+              </li>
+              <li>
+                <div><small class="circle circle-lg">3</small></div>
+                <span>Easy Followups and appointment booking</span>
+              </li>
+              <li>
+                <div><small class="circle circle-lg">4</small></div>
+                <span>24/7 phone support and case assistance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <img src="../../assets/img/templates/about-clinic.jpg" class="img-fluid w-100 rounded-12" alt="Travel">
+        </div>
+      </div>
+    </section>
+
+    <!-- Muse Section -->
+    <section class="muse-section">
+      <h3 class="mt-3 mt-md-0 mb-2 h1">We got you covered</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p class="fs-20 text-black-600">Professional medical assistance</p>
+        </div>
+        <div class="col-md-4">
+          <div class="text-md-end">
+            <a href="javascript:void(0)" class="btn btn-link">See all doctors <svg class="ms-2" data-name="icons/tabler/chevron right" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+              <rect data-name="Icons/Tabler/Chevron Right background" width="16" height="16" fill="none"/>
+              <path d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z" transform="translate(4)" fill="#0D6EFD"/>
+            </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 mt-md-0">
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic1.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Alice Brown</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic2.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Hannah Morales</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Eric Sanchez</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic4.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Charles Peterson</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic5.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Eugene Kennedy</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-6 col-lg-4 mt-0 mt-md-4" data-aos="fade-up" data-aos-delay="100">
+          <figure class="card team-card mb-0 mb-lg-4">
+            <div class="muse-animation rounded-12">
+              <img src="../../assets/img/templates/team-clinic6.jpg" class="img-fluid w-100 rounded-12" alt="Team">
+              <div class="team-overlay">
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+                    <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#ffffff"/>
+                  </svg>
+                </a>
+                <a href="javascript:void(0)" class="btn btn-icon btn-primary">
+                  <svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                    <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+                    <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#ffffff"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+            <figcaption class="py-3 text-center">
+              <h5 class="mb-md-0 mb-1"><a href="javascript:void(0);">Paul Turner</a></h5>
+              <p>Psychiatrist</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Muse Section -->
+    <section class="muse-section">
+      <h3 class="h1 mb-4 mb-md-5">Departments</h3>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="36" viewBox="0 0 40 36">
+                <path id="cardiology" d="M20.005,36H20c-.032,0-.066,0-.107,0l-.035,0c-.033,0-.067-.007-.1-.013l-.033-.005c-.029-.005-.057-.011-.085-.018l-.02,0-.02,0c-.034-.009-.068-.019-.1-.03l-.008,0-.015-.006-.089-.035-.027-.012c-.038-.017-.073-.034-.106-.052l-.007,0c-.037-.02-.073-.042-.106-.064l-.007,0c-.037-.025-.073-.051-.106-.077l-.005,0c-.046-.038-.083-.07-.115-.1l0-.005c-.028-.028-.057-.06-.088-.1l-.022-.024a.016.016,0,0,0,0-.006,55.155,55.155,0,0,0-6.258-6l-.049-.043c-1.056-.921-2.149-1.873-3.221-2.851a1.544,1.544,0,0,1-.093-2.192,1.57,1.57,0,0,1,2.208-.093c1.066.974,2.157,1.924,3.212,2.842C16.576,28.825,18.46,30.466,20,32.1c1.542-1.63,3.424-3.271,5.418-5.008l.036-.032a1.571,1.571,0,0,1,2.206.143,1.545,1.545,0,0,1-.144,2.19l-.037.031a55.113,55.113,0,0,0-6.261,6l-.005.006-.01.012-.01.012c-.031.036-.06.067-.088.1l0,.005a1.508,1.508,0,0,1-.115.1l0,0c-.042.033-.075.057-.108.079l-.008,0c-.03.02-.066.043-.1.063l-.01.005c-.032.017-.066.035-.105.052l-.013.006-.015.007-.087.034-.01,0-.015.005c-.033.011-.067.021-.1.03l-.041.01c-.027.007-.055.013-.082.018l-.035.005c-.033.005-.066.009-.1.013l-.035,0C20.071,36,20.037,36,20.005,36ZM17.891,25.138h-.039a1.567,1.567,0,0,1-1.389-.919l-3.17-7.055-1.552,3.148a1.554,1.554,0,0,1-1.4.869H1.562a1.552,1.552,0,1,1,0-3.1h.4A13.557,13.557,0,0,1,0,11.272,11.333,11.333,0,0,1,3.151,3.065,10.637,10.637,0,0,1,10.781,0c5.167,0,7.839,2.64,9.17,4.856l.024.041L20,4.937l.025-.041.025-.041C21.38,2.64,24.052,0,29.219,0a10.637,10.637,0,0,1,7.63,3.065A11.33,11.33,0,0,1,40,11.272c0,5.432-3.894,9.986-6.824,12.938a1.571,1.571,0,0,1-2.21.016,1.544,1.544,0,0,1-.016-2.194c4.043-4.074,5.926-7.493,5.926-10.76,0-4.809-3.148-8.168-7.656-8.168a7.032,7.032,0,0,0-6.433,3.255,9,9,0,0,0-1.228,3.517,1.563,1.563,0,0,1-3.116-.007,9.074,9.074,0,0,0-1.228-3.51A7.03,7.03,0,0,0,10.781,3.1c-4.508,0-7.656,3.359-7.656,8.168a11.825,11.825,0,0,0,2.53,6.806H9.364l2.592-5.26a1.572,1.572,0,0,1,1.4-.87h.032a1.567,1.567,0,0,1,1.4.92l3.192,7.106,2.033-3.993a1.562,1.562,0,0,1,1.382-.852h.013a1.559,1.559,0,0,1,1.382.83l1.123,2.119h3.51a1.552,1.552,0,1,1,0,3.1H22.969a1.561,1.561,0,0,1-1.383-.829l-.151-.286-2.149,4.221A1.556,1.556,0,0,1,17.891,25.138Z" fill="#fff"/>
+              </svg>                
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">Cardiology</a></h5>
+            <p class="mb-0">4 Doctors</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="39.999" viewBox="0 0 40 39.999">
+                <path id="tooth" d="M25.778,39.988a2.88,2.88,0,0,1-2.329-1.012c-.95-1.19-.588-2.774-.169-4.609.731-3.2,1.555-6.817-3.269-9.273-4.829,2.532-4.01,6.128-3.285,9.317.413,1.814.769,3.382-.175,4.565a2.888,2.888,0,0,1-2.336,1.012c-.086.006-.174.01-.26.01a5.252,5.252,0,0,1-3.706-1.96,24.132,24.132,0,0,1-4.51-8.051,21.024,21.024,0,0,1-1.492-8.058C3.225,20.247,0,14.587,0,10.078,0,4.38,4.643.061,10.814,0h.111a15.282,15.282,0,0,1,5.83,1.238,12.129,12.129,0,0,0,4.513,1.024A13.53,13.53,0,0,1,29.063,0a11.606,11.606,0,0,1,7.622,2.742A9.6,9.6,0,0,1,40,10.078c0,4.507-3.222,10.165-4.245,11.849a18.539,18.539,0,0,1-.854,6.083,1.563,1.563,0,0,1-3-.865,13.957,13.957,0,0,0,.7-5.342,1.566,1.566,0,0,1,.231-1.09c.041-.061,4.046-6.317,4.046-10.635,0-3.948-3.361-6.937-7.817-6.953-4.178,0-7.283,1.83-9.769,5.757a1.562,1.562,0,0,1-2.641-1.67,19.983,19.983,0,0,1,1.6-2.2,21.421,21.421,0,0,1-2.6-.851,12.13,12.13,0,0,0-4.756-1.037c-3.864.02-7.769,2.412-7.769,6.953,0,4.318,4.006,10.574,4.046,10.636A1.559,1.559,0,0,1,7.4,21.8c-.24,1.539.248,4.27,1.276,7.125a21.316,21.316,0,0,0,3.84,6.962c.735.778,1.238.982,1.441.982h.006l.038,0h.013a16.743,16.743,0,0,0-.339-1.765,14.494,14.494,0,0,1-.4-6.5c.644-2.866,2.686-5.108,6.07-6.66a1.561,1.561,0,0,1,1.285-.008c3.4,1.508,5.457,3.73,6.1,6.6a14.568,14.568,0,0,1-.41,6.53,16.968,16.968,0,0,0-.346,1.807l.026,0h.007c.305.022,1.4-.474,2.97-3.006a1.562,1.562,0,1,1,2.658,1.643C29.8,38.49,27.915,40,26.043,40,25.954,40,25.866,39.994,25.778,39.988Zm4.812-29.91c0-.2-.023-.221-.108-.3a2.276,2.276,0,0,0-1.438-.419,1.562,1.562,0,0,1,.009-3.125h.01a5.293,5.293,0,0,1,3.483,1.2,3.374,3.374,0,0,1,1.17,2.643,1.563,1.563,0,0,1-3.126,0Z" fill="#fff"/>
+              </svg>                               
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">Dentistry</a></h5>
+            <p class="mb-0">6 Doctors</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30">
+                <path id="lungs" d="M29.508,29.182a10.879,10.879,0,0,1-3.295-1.335,3.569,3.569,0,0,1-1.839-3.019v-11.5a14.09,14.09,0,0,1-4.421-3.047,11.728,11.728,0,0,1-4.329,3.049V24.826a3.566,3.566,0,0,1-1.839,3.019,10.836,10.836,0,0,1-3.295,1.335A31.742,31.742,0,0,1,3.348,30,2.948,2.948,0,0,1,.382,27.443,45.665,45.665,0,0,1,0,22.5C0,14.958,2.11,9.909,3.879,7c1.977-3.249,4.65-5.683,7.15-6.51a3.47,3.47,0,0,1,3.576.821,3.357,3.357,0,0,1,1.021,2.413V9.889A6.694,6.694,0,0,0,18.36,7.084a1.507,1.507,0,0,1,.077-.368V1.531a1.563,1.563,0,0,1,3.125,0V7.1c0,.027,0,.054,0,.081a6.411,6.411,0,0,0,2.808,2.685V3.8A3.352,3.352,0,0,1,25.4,1.39,3.466,3.466,0,0,1,28.972.569,13.491,13.491,0,0,1,34.939,5.31a25.25,25.25,0,0,1,4.513,10.8,1.533,1.533,0,0,1-1.266,1.774,1.56,1.56,0,0,1-1.811-1.24,21.965,21.965,0,0,0-3.94-9.5,10.526,10.526,0,0,0-4.462-3.671.319.319,0,0,0-.367.086.345.345,0,0,0-.1.247V24.828c0,.136.5.809,2.79,1.39a28.268,28.268,0,0,0,6.242.721c.016-.136.033-.274.05-.415.113-.942.243-2.01.294-2.923a1.563,1.563,0,0,1,3.12.168c-.057,1.01-.193,2.128-.311,3.115-.023.193-.047.38-.068.562A2.949,2.949,0,0,1,36.652,30,31.73,31.73,0,0,1,29.508,29.182Z" fill="#fff"/>
+              </svg>                               
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">Pulmonology</a></h5>
+            <p class="mb-0">8 Doctors</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                <path id="stethoscope" d="M9.062,30.781V26.387L3.442,18.23a1.554,1.554,0,0,1-.149-.269c-.063-.061-.127-.124-.189-.187A11.288,11.288,0,0,1,0,9.766c0-.049,0-.1.007-.145S0,9.526,0,9.477V3.632A3.637,3.637,0,0,1,3.632,0H6.484A1.562,1.562,0,0,1,8.047,1.562V3.046a1.562,1.562,0,0,1-3.123.078H3.632a.508.508,0,0,0-.508.508V9.477c0,.049,0,.1-.007.144s.007.1.007.145c0,4.617,3.155,7.969,7.5,7.969,4.322,0,7.465-3.316,7.5-7.895,0-.024,0-.05,0-.075l0-6.133a.508.508,0,0,0-.508-.508H16.25a1.563,1.563,0,0,1-3.126,0V1.562A1.563,1.563,0,0,1,14.687,0h2.93A3.637,3.637,0,0,1,21.25,3.632l0,6.053c0,.026,0,.053,0,.08a11.288,11.288,0,0,1-3.1,8.008q-.153.155-.312.3a1.4,1.4,0,0,1-.092.153l-5.555,8.06v4.49a6.093,6.093,0,1,0,12.187,0,1.563,1.563,0,0,1,3.126,0,9.219,9.219,0,0,1-18.438,0Zm21.563-9.609a4.693,4.693,0,0,1,3.125-4.418V6.25a3.125,3.125,0,1,0-6.25,0V22.969a1.563,1.563,0,0,1-3.126,0V6.25a6.25,6.25,0,0,1,12.5,0v10.5a4.687,4.687,0,1,1-6.25,4.418Z" fill="#fff"/>
+              </svg>                               
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">General Medicine</a></h5>
+            <p class="mb-0">12 Doctors</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                <path id="stomach" d="M13.248,34.937c-1.419-1.55-2.219-2.359-3.489-2.359l-.082,0a4.622,4.622,0,0,0-.313,1.651c0,.073.005.148.005.222v3.984a1.561,1.561,0,1,1-3.122,0V34.453c0-.024,0-.049,0-.074s-.067-2.694,1.243-4.067a2.962,2.962,0,0,1,2.271-.859c2.7,0,4.273,1.714,5.791,3.373,1.822,1.99,3.705,4.048,8.1,4.048a11.906,11.906,0,0,0,7.894-2.588,1.562,1.562,0,0,1,2.007,2.395A14.939,14.939,0,0,1,23.651,40C17.88,40,15.2,37.074,13.248,34.937ZM0,38.437v-3.9C-.023,33.593.019,29.1,2.969,26a9.123,9.123,0,0,1,6.79-2.8A10.341,10.341,0,0,1,16,25.283a4.859,4.859,0,0,0,2.735,1.123,1.481,1.481,0,0,0,.368-.036,1.341,1.341,0,0,0,.023-.276V17.032A5.131,5.131,0,0,0,19,15.755a7.707,7.707,0,0,1-4.876-2.546A17.225,17.225,0,0,1,10.7,7.793,16.923,16.923,0,0,1,9.525,1.562a1.561,1.561,0,1,1,3.122,0,13.78,13.78,0,0,0,3.766,9.519,4.6,4.6,0,0,0,3.067,1.575,2.4,2.4,0,0,1,1.887.935,5.427,5.427,0,0,1,.879,3.439l0,9.063a3.226,3.226,0,0,1-3.514,3.438A7.7,7.7,0,0,1,14.289,27.9a7.375,7.375,0,0,0-4.531-1.57,6.079,6.079,0,0,0-4.531,1.828c-2.165,2.272-2.116,5.9-2.1,6.306v3.975a1.561,1.561,0,1,1-3.121,0Zm35.928-7.152A1.563,1.563,0,0,1,35.1,29.24a27.579,27.579,0,0,0,1.75-11c0-.038,0-.076,0-.112,0-4.3-1.022-7.478-3.039-9.431A7.357,7.357,0,0,0,29.01,6.639h-.051A8.466,8.466,0,0,0,23.846,8.6a7.216,7.216,0,0,1-2.313,1.245,2.891,2.891,0,0,1-3.053-1.136,10.673,10.673,0,0,1-2.712-7.151,1.561,1.561,0,1,1,3.122,0,7.6,7.6,0,0,0,1.95,5.106c.019.022.038.043.055.066l.027.032a10.154,10.154,0,0,0,1.142-.729,11.527,11.527,0,0,1,6.879-2.522,10.454,10.454,0,0,1,7.029,2.933c2.639,2.555,3.981,6.466,3.99,11.624a30.3,30.3,0,0,1-1.988,12.375,1.56,1.56,0,0,1-2.043.838Z" transform="translate(0)" fill="#fff"/>
+              </svg>                                              
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">Gastroenterology</a></h5>
+            <p class="mb-0">4 Doctors</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card dept-card bg-gray-100 border-0 text-center rounded-12 p-4 p-lg-5 transition-3d-hover">
+            <span class="dept-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 40 35">
+                <path id="pulse" d="M12.969,35a1.591,1.591,0,0,1,0-3.182h5.468V28.644H6.25A6.316,6.316,0,0,1,0,22.279V6.366A6.316,6.316,0,0,1,6.25,0h27.5A6.316,6.316,0,0,1,40,6.366v7.956a1.563,1.563,0,1,1-3.125,0V6.366A3.158,3.158,0,0,0,33.75,3.182H6.25A3.158,3.158,0,0,0,3.125,6.366V22.279A3.158,3.158,0,0,0,6.25,25.462h27.5a3.158,3.158,0,0,0,3.125-3.183,1.563,1.563,0,1,1,3.125,0,6.316,6.316,0,0,1-6.25,6.366H21.562v3.173h5.469a1.591,1.591,0,0,1,0,3.182ZM24.426,22.279a1.563,1.563,0,0,1-1.424-1l-3.663-9.328L16.1,18.976a1.549,1.549,0,0,1-2.769.116l-1.972-3.5H7.813a1.591,1.591,0,0,1,0-3.182h4.452a1.557,1.557,0,0,1,1.355.8l.927,1.645,3.491-7.576a1.552,1.552,0,0,1,2.866.085l3.618,9.213,1.391-3.217a1.563,1.563,0,0,1,1.43-.95h4.844a1.591,1.591,0,0,1,0,3.182H28.363l-2.479,5.734a1.562,1.562,0,0,1-1.43.95Z" fill="#fff"/>
+              </svg>                                              
+            </span>
+            <h5 class="mb-0 mt-3"><a href="javascript:void(0)" class="stretched-link">Scans</a></h5>
+            <p class="mb-0">CT, MRI, X-Ray (+6)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Muse Section, Py 0 -->
+    <section class="muse-section py-0">
+      <div class="bg-blue-400 rounded-12 p-3 p-md-5 p-sm-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="row py-2">
+          <div class="col-lg-6 ps-3 ps-lg-4">
+            <h2 class="display-4 text-white mb-lg-4">Book your appointment</h2>
+            <p class="fs-20 text-white lh-lg pe-lg-5 mb-4 mb-lg-3">It takes less than a minute!</p>
+          </div>
+          <div class="col-lg-6 ps-3 ps-lg-5">
+            <div class="ms-lg-2">
+              <div class="rounded-12 bg-white p-4 ms-xl-4 me-xl-2">
+                <form class="line-form p-md-2">
+                  <div class="mb-4">
+                    <select class="form-select form-select-lg">
+                      <option>Full Name</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <select class="form-select form-select-lg">
+                      <option>Department</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <select class="form-select form-select-lg">
+                      <option>Date</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-select form-select-lg">
+                      <option>Time</option>
+                    </select>
+                  </div>
+                  <div class="form-check form-check-sm mb-4">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label text-gray-600 pt-1" for="gridCheck">
+                      I agree to the <a href="javascript:void(0)" class="text-gray-600">Terms &amp; Conditions</a>
+                    </label>
+                  </div>
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-primary">Book now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Muse Section -->
+    <section class="muse-section">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 my-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-12 shadow-dark-80 bg-white p-4 h-md-100 m-0">
+            <div class="d-flex p-xl-2">
+              <span class="text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                  <g data-name="icons/tabler/mail" transform="translate(0)">
+                    <rect data-name="Icons/Tabler/Mail background" width="16" height="16" fill="none"/>
+                    <path d="M2.256,12.718A2.259,2.259,0,0,1,0,10.462V2.274c0-.013,0-.026,0-.038A2.259,2.259,0,0,1,2.256,0H13.744A2.259,2.259,0,0,1,16,2.256v8.205a2.259,2.259,0,0,1-2.256,2.256ZM1.231,10.462a1.027,1.027,0,0,0,1.025,1.026H13.744a1.027,1.027,0,0,0,1.025-1.026V3.406L8.341,7.691a.613.613,0,0,1-.6.045l-.08-.045L1.231,3.407ZM8,6.439l6.724-4.482a1.027,1.027,0,0,0-.98-.726H2.256a1.027,1.027,0,0,0-.98.726Z" transform="translate(0 2)" fill="#1e1e1e"/>
+                  </g>
+                </svg>                
+              </span>
+              <div class="ps-3 ms-xl-2">
+                <h5 class="mb-1">Ask a question</h5>
+                <p class="mb-0 lh-lg">Email support to answer all your questions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-12 shadow-dark-80 bg-white p-4 h-md-100 m-0">
+            <div class="d-flex p-xl-2">
+              <span class="text-primary">
+                <svg data-name="icons/tabler/map" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                  <rect data-name="Icons/Tabler/Map background" width="16" height="16" fill="none"/>
+                  <path d="M5.45,15.356l-3.4-3.4a7.005,7.005,0,1,1,9.907,0l-3.4,3.4a2.2,2.2,0,0,1-3.112,0ZM2.9,2.9a5.812,5.812,0,0,0,0,8.209l3.4,3.4a1,1,0,0,0,1.415,0l3.4-3.4a5.8,5.8,0,0,0,0-8.209l-.153-.148A5.8,5.8,0,0,0,2.9,2.9ZM4,7.006a3,3,0,1,1,3,3A3.005,3.005,0,0,1,4,7.006Zm1.2,0a1.8,1.8,0,1,0,1.8-1.8A1.8,1.8,0,0,0,5.2,7.006Z" transform="translate(1)" fill="#1e1e1e"/>
+                </svg>                
+              </span>
+              <div class="ps-3 ms-xl-2">
+                <h5 class="mb-1">Locations</h5>
+                <p class="mb-0 lh-lg">Choose our closest branch to your home</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 my-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-12 shadow-dark-80 bg-white p-4 h-md-100 m-0">
+            <div class="d-flex p-xl-2">
+              <span class="text-primary">
+                <svg data-name="icons/tabler/tag" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+                  <rect data-name="Icons/Tabler/Tag background" width="16" height="16" fill="none"/>
+                  <path d="M7.935,15.593l-.122-.1L.186,7.865a.628.628,0,0,1-.178-.349L0,7.416V4.026A4.017,4.017,0,0,1,3.841,0l.184,0h3.39L7.46,0l.042,0,.083.017L7.664.05l.053.025L7.8.132l.061.054L15.518,7.84a1.92,1.92,0,0,1,.076,2.447l-.1.121-5.111,5.11A1.894,1.894,0,0,1,9.121,16,1.931,1.931,0,0,1,7.935,15.593ZM1.275,3.869l0,.157V7.151L8.687,14.57a.649.649,0,0,0,.434.165.6.6,0,0,0,.32-.089l.069-.051,5.061-5.06a.639.639,0,0,0,.076-.752l-.051-.069L7.151,1.272H4.026A2.755,2.755,0,0,0,1.275,3.869ZM3.39,5.721a2.331,2.331,0,1,1,2.331,2.33A2.334,2.334,0,0,1,3.39,5.721Zm1.272,0A1.059,1.059,0,1,0,5.721,4.662,1.06,1.06,0,0,0,4.662,5.721Z" fill="#1e1e1e"/>
+                </svg>                
+              </span>
+              <div class="ps-3 ms-xl-2">
+                <h5 class="mb-1">Promotions</h5>
+                <p class="mb-0 lh-lg">Explore all our offers and promotions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Muse Footer, Pt 4, Pt Md 5, Pb 2, Pb Md 4, Mt 4 -->
+<footer class="pt-4 pt-md-5 pb-2 pb-md-4 mt-md-4">
+ <div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 pt-3 pt-md-4">
+      <div class="col mb-3">
+        <h6 class="font-weight-bold">Product</h6>
+        <ul class="list-unstyled footer-link">
+          <li>
+            <a href="javascript:void(0);">Get started</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Updates</a>
+          </li>
+          <li>
+            <a href="../templates/education.html">Features</a>
+          </li>
+          <li>
+            <a href="../pages/pricing.html">Pricing</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h6 class="font-weight-bold">Platforms</h6>
+        <ul class="list-unstyled footer-link">
+          <li>
+            <a href="javascript:void(0);">Android</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">iOS</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Web</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Unity</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h6 class="font-weight-bold">Resources</h6>
+        <ul class="list-unstyled footer-link">
+          <li>
+            <a href="javascript:void(0);">Tutorials</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Plugins <span class="badge badge-success fs-11 py-1 px-2 ms-1">NEW</span></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Events</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Integrations</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h6 class="font-weight-bold">About</h6>
+        <ul class="list-unstyled footer-link">
+          <li>
+            <a href="javascript:void(0);">Community</a>
+          </li>
+          <li>
+            <a href="../templates/agency.html">Company</a>
+          </li>
+          <li>
+            <a href="../pages/job-listing.html">Jobs</a>
+          </li>
+          <li>
+            <a href="../blog/blog-home1.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-0 mb-md-3">
+        <h6 class="font-weight-bold">Support</h6>
+        <ul class="list-unstyled footer-link">
+          <li>
+            <a href="../pages/help-center.html">Help Center</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Tickets</a>
+          </li>
+          <li>
+            <a href="../pages/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">Forum</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-sm-5 order-sm-2">
+        <div class="social-icons">
+          <a href="javascript:void(0);"><svg data-name="icons/tabler/facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+            <rect data-name="Icons/Tabler/Facebook background" width="16" height="16" fill="none"/>
+            <path d="M6.359,16H3.077a.618.618,0,0,1-.61-.532l-.005-.084V10.256H.616a.618.618,0,0,1-.61-.532L0,9.641V6.359a.617.617,0,0,1,.532-.61l.084-.005H2.462V4.718A4.7,4.7,0,0,1,7,0l.181,0H9.641a.618.618,0,0,1,.61.532l.005.084V3.9a.617.617,0,0,1-.532.61l-.084.005H7.179a.2.2,0,0,0-.2.158l-.005.047V5.744H9.641a.615.615,0,0,1,.611.687l-.013.077L9.418,9.79a.614.614,0,0,1-.5.459l-.092.007H6.974v5.128a.618.618,0,0,1-.532.61ZM1.231,6.974V9.025H3.077a.617.617,0,0,1,.609.532l.006.084v5.128H5.744V9.641a.616.616,0,0,1,.532-.609l.084-.006h1.98l.513-2.051H6.359a.617.617,0,0,1-.61-.532l-.005-.083V4.718A1.443,1.443,0,0,1,7.061,3.287l.118,0H9.025V1.231H7.179A3.481,3.481,0,0,0,3.7,4.549l0,.169V6.359a.617.617,0,0,1-.532.609l-.084.005Z" transform="translate(3)" fill="#1e1e1e"/>
+          </svg>
+          </a>
+          <a href="javascript:void(0);"><svg data-name="icons/tabler/dribbble" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+            <rect data-name="Icons/Tabler/Dribbble background" width="16" height="16" fill="none"/>
+            <path d="M0,8a8,8,0,1,1,12.071,6.885.613.613,0,0,1-.148.086A8,8,0,0,1,0,8Zm8,6.769a6.729,6.729,0,0,0,3.04-.722A18.964,18.964,0,0,0,10.085,9.7a11.826,11.826,0,0,0-4.847,3.087l-.385.379-.522.524A6.728,6.728,0,0,0,8,14.769Zm4.193-1.458a6.774,6.774,0,0,0,2.486-4.2,18.649,18.649,0,0,0-3.393.293A19.879,19.879,0,0,1,12.193,13.311ZM1.231,8a6.751,6.751,0,0,0,2.126,4.921l.814-.815A13.357,13.357,0,0,1,9.638,8.547a20.668,20.668,0,0,0-1.049-2.1,20.8,20.8,0,0,1-7.345,1.14Q1.231,7.792,1.231,8Zm9.611.234a19.647,19.647,0,0,1,3.926-.359A6.737,6.737,0,0,0,13.224,3.7a18.084,18.084,0,0,1-3.5,2.258A21.639,21.639,0,0,1,10.842,8.234ZM1.434,6.354A19.65,19.65,0,0,0,7.94,5.372,37.065,37.065,0,0,0,5.305,1.791,6.8,6.8,0,0,0,1.434,6.354ZM9.093,4.893a16.545,16.545,0,0,0,3.261-2.073A6.767,6.767,0,0,0,6.562,1.385,36.568,36.568,0,0,1,9.093,4.893Z" fill="#1e1e1e"/>
+          </svg>
+          </a>
+          <a href="javascript:void(0);"><svg data-name="icons/tabler/instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+            <rect data-name="Icons/Tabler/Instagram background" width="16" height="16" fill="none"/>
+            <path d="M4.343,16A4.348,4.348,0,0,1,0,11.657V4.343A4.347,4.347,0,0,1,4.343,0h7.314A4.348,4.348,0,0,1,16,4.343v7.314A4.348,4.348,0,0,1,11.657,16ZM1.372,4.343v7.314a2.975,2.975,0,0,0,2.971,2.972h7.314a2.975,2.975,0,0,0,2.972-2.972V4.343a2.975,2.975,0,0,0-2.972-2.971H4.343A2.974,2.974,0,0,0,1.372,4.343ZM4.571,8A3.429,3.429,0,1,1,8,11.428,3.434,3.434,0,0,1,4.571,8ZM5.943,8A2.057,2.057,0,1,0,8,5.943,2.06,2.06,0,0,0,5.943,8Zm5.492-4.02-.006-.094a.686.686,0,0,1,1.365-.094l.006.093a.686.686,0,0,1-1.365.094Z" fill="#1e1e1e"/>
+          </svg>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <p class="small text-gray-600 text-center text-sm-start">&copy; 2020 Fabrx Design. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/lodash/lodash.min.js"></script>
+<script src="../../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script src="../../assets/vendor/progressbar/dist/progressbar.min.js"></script>
+<script src="../../assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../../assets/js/theme-custom.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+ 
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Login - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="login-template">
+
+<!-- RTL Button -->
+<div class="badge badge-primary rounded-pill p-3 muze-hamburger position-fixed bottom-0 mb-3 mx-3 end-0 z-index10" id="RTLMode"><span class="me-2 rtl-text">RTL</span><div class="mb-0 form-check form-switch">
+  <input class="form-check-input me-0" type="checkbox" id="flexSwitchCheckDefault"></div><span class="ltr-text">LTR</span></div>
+
+<!-- Muse Login -->
+<div class="position-absolute p-4 p-md-5">
+  <a href="../templates/index.html"><img src="../../assets/svg/brand/logo-white.svg" alt="Muse"></a>
+</div>
+<div class="row g-0 align-items-center">
+  <div class="col-md-6 col-lg-7">
+    <img src="../../assets/img/pages/login-cover.jpg" class="cover-fit" alt="Login Cover">
+  </div>
+  <div class="col-md-6 col-lg-5">
+    <div class="p-3 p-sm-5">
+      <div class="login-form ms-lg-4">
+        <h1 class="mb-3">Sign in</h1>
+        <form class="pt-2">
+          <div class="mb-4">
+            <label class="form-label form-label-lg">Username</label>
+            <input type="text" class="form-control form-control-lg" value="fabrxdesign">
+          </div>
+          <div class="mb-4">
+            <label class="form-label form-label-lg">Password</label>
+            <input type="password" class="form-control form-control-lg" value="••••••••••••••••">
+          </div>
+          <div class="d-grid">
+            <button type="button" class="btn btn-xl btn-primary">Sign in</button>
+          </div>
+          <div class="mt-4 d-flex">
+            <div class="form-check form-check-sm mb-0">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label text-gray-600" for="gridCheck">
+                Remember me
+              </label>
+            </div>
+            <a href="../pages/account-security.html" class="small text-gray-600 ms-auto mt-1">Forgot password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+ 
+</script>
+</body>
+</html>

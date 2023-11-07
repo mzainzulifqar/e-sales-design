@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Maintenance - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maintenance-template">
+
+<!-- RTL Button -->
+<div class="badge badge-primary rounded-pill p-3 muze-hamburger position-fixed bottom-0 mb-3 mx-3 end-0 z-index10" id="RTLMode"><span class="me-2 rtl-text">RTL</span><div class="mb-0 form-check form-switch">
+  <input class="form-check-input me-0" type="checkbox" id="flexSwitchCheckDefault"></div><span class="ltr-text">LTR</span></div>
+
+<div class="position-absolute w-100 pt-4 pt-md-5">
+  <div class="container">
+    <a href="../templates/index.html"><img src="../../assets/svg/brand/logo.svg" alt="Muse"></a>
+  </div>
+</div>
+<!-- Muse Maintenance -->
+<div class="row g-0 align-items-center">
+  <div class="col-md-6">
+    <div class="maintenance-left">
+      <h1 class="h2">Under Maintenance</h1>
+      <p class="text-black-600 big lh-lg mb-md-4 mb-2 pb-2 pe-md-5">Our website is currently undergoing some updates, we’ll be back soon.</p>
+      <a href="javascript:void(0);" class="btn btn-lg btn-primary">Check again</a>
+    </div>
+  </div>
+  <div class="col-md-6 bg-blue-50 vh-100 maintenance-right d-flex align-items-center justify-content-center px-4 py-5 p-md-5">
+    <img src="../../assets/img/pages/maintenance.svg" alt="Maintenance">
+  </div>
+</div>
+  
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+ checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+ 
+</script>
+</body>
+</html>

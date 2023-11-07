@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>404 - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="error-template">
+
+<!-- RTL Button -->
+<div class="badge badge-primary rounded-pill p-3 muze-hamburger position-fixed bottom-0 mb-3 mx-3 end-0 z-index10" id="RTLMode"><span class="me-2 rtl-text">RTL</span><div class="mb-0 form-check form-switch">
+  <input class="form-check-input me-0" type="checkbox" id="flexSwitchCheckDefault"></div><span class="ltr-text">LTR</span></div>
+
+  <!-- Muse Login -->
+  <div class="container">
+    <div class="row align-items-center vh-100">
+      <div class="col-md-10 col-lg-7 m-auto py-4 py-md-5">
+        <div class="text-center">
+          <h1 class="display-2 mb-4">Ooops!</h1>
+          <p class="text-black-600">Looks like the page you’re looking for does not exist</p>
+          <div class="py-4 py-lg-5">
+            <img src="../../assets/img/pages/404.svg" alt="404">
+          </div>
+          <p><a href="../templates/index.html" class="btn btn-lg btn-primary">Back Home</a></p>
+          <p><a href="javascript:void(0);" class="small text-gray-600">Report an issue</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+ 
+</script>
+</body>
+</html>
