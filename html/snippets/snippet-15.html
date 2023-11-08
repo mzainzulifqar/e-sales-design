@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Blog Post - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="blog-post-template ">
+
+<!-- Muse Section, Disclosure-section slide-11 -->
+<section class="muse-section Disclosure-section">
+  <div class="container">
+    <div class="row pb-3">
+      <div class="col-md-12">
+        <div class="heading">
+          <h1 class="pb-3">Disclosure</h1>   
+        </div>
+        <div class="content"> 
+          <p>
+             The information contained in this document should be considered preliminary in nature. Elan reserves the right to modify statements made within the body
+              of this document and attachments based upon further information gathered in subsequent meetings with parties relevant to this proposal, including your
+              institution (“<a href="javascript:void(0);">Prospect Name</a>”), management teams. Any terms of a specific relationship or other strategic transaction are not binding until a formal
+              agreement is executed between Elan and your institution.
+          </p>
+          <p>
+             Any logo and other brand styles were borrowed from websites for the purpose of creating this presentation.
+          </p>
+          <p>
+             This document has been prepared by Elan solely for the purpose of giving a preliminary indication of Elan’s interest in pursuing a joint marketing alliance.
+              The information contained in this document and any additional written or oral information provided to your institution and its advisors is confidential and
+              shall not be used for any purpose other than to evaluate a potential alliance with Elan.
+          </p>
+          <p>
+             Some of the information in this document may anticipate the future performance of a financial institution or the industry. Such projections and forwardlooking statements reflect various assumptions concerning the future performance of a financial institution or the industry and are subject to significant
+              business, economic and competitive uncertainties and contingencies. Accordingly, there can be no assurance that such projections and forward-looking
+              statements will be realized. No representations or warranties are made as to the accuracy or reasonableness of such assumptions or projections. Only
+              those particular representations and warranties which may be made in a definitive partnership agreement, when and if it is finally executed, and subject to
+              such limitations and restrictions as may be agreed, shall have any legal effect.
+          </p>
+          <p>
+             This information shall not be disclosed or otherwise made available to anyone not directly concerned with the decision regarding such a transaction and /
+              or joint marketing alliance. 
+          </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/lodash/lodash.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script src="../../assets/js/theme-custom.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+ 
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+
+  //Muse Swiper Clients Slider JavaScript
+  var swiper = new Swiper('.swiper-clients', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Swiper Product Listing Slider JavaScript
+  var swiper = new Swiper('.swiper-list', {
+    slidesPerView: 1,
+    spaceBetween: 28,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  //Muse Swiper Product Listing Slider JavaScript
+  var swiper = new Swiper('.swiper-list2', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  //Muse Swiper Navication Slider JavaScript
+  var swiper = new Swiper('.swiper-navication', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: false,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+</script>
+</body>
+</html>
