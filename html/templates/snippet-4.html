@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Snippet 4</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template">
+
+  <section class="muse-section">
+    <div class="container-fluid max-90">
+    
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-6">
+          <h3 class="mt-3 mt-md-0 mb-2 h1 font-weight-medium">Elan Partnership Advantage</h3>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="bg-black text-white px-5 py-3 black-box-content ms-lg-auto">
+            Our focus on collaboration, time-tested expertise and innovative  approach fuel your success, unlocking potential and growth
+        </div>
+      </div>
+    </div> 
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <div class="border border-gray-400 p-3 px-lg-5 py-lg-3 partner-adv-list-box">
+                <ul class="list-unstyled m-0">
+                  <li class="my-2"><h4 class="m-0 text-primary">Partnership Focus</h4></li>
+                  <li class="my-2"><h4 class="m-0 text-primary">Proven Qualifications</h4></li>
+                  <li class="my-2"><h4 class="m-0 text-primary">Growth-Driven Philosophy</h4></li>
+                </ul>
+            </div>
+
+            <div class="partner-adv-list-item-box partner-adv-list-item-box-1">
+              <ul class="m-0">
+                <li class="text-gray-600">Brand and logo recognition</li>
+                <li class="text-gray-600">Deepen institution relationships</li>
+                <li class="text-gray-600">Expand growth opportunities with 
+                  minimal initial investment</li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+            <img src="../../assets/img/templates/partnership-circle.jpg" alt="Partnership" >
+            <!-- <div class="circle-wrap position-relative"> 
+              <div class="circle-blue">
+                Alignment
+              </div>
+              <div class="circle-black">
+                Accretive
+              </div>
+              <div class="circle-gray">
+                Synergistic
+              </div>
+            </div> -->
+        </div>
+        <div class="col-lg-4">
+            <div class="partner-adv-list-item-box partner-adv-list-item-box-2">
+              <ul class="m-0">
+                <li class="text-gray-600">Digitally focused </li>
+                <li class="text-gray-600">Cardmember dedicated</li>
+                <li class="text-gray-600">Ongoing technology investment</li>
+                <li class="text-gray-600">Result-focused expertise</li>
+              </ul>
+            </div>
+            <div class="partner-adv-list-item-box partner-adv-list-item-box-3">
+              <ul class="m-0">
+                <li class="text-gray-600">More income from Day 1</li>
+                <li class="text-gray-600">Proven cardmember acquisitions</li>
+                <li class="text-gray-600">Top of wallet portfolio growth</li>
+                <li class="text-gray-600">Short- and long-term financial gains</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+    
+  </div>
+  </section>
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+  
+  //Muse Typed JavaScript
+  var typed = new Typed("#muse-type", {
+    stringsElement: '#type-captions',
+    typeSpeed: 150,
+    backSpeed: 50,
+    backDelay: 1500,
+    startDelay: 1000,
+    loop: true,
+  });
+
+  //Muse Swipper JavaScript
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+</script>
+</body>
+</html>

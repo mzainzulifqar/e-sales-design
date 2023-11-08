@@ -2,6 +2,10 @@
 @import '../vendor/bootstrap/scss/functions';
 /* Muse setup */
 @import 'muse/variables';
+
+
 /* Bootstrap core */
 @import '../vendor/bootstrap/scss/bootstrap';
 @import 'muse/muse';
+
+@import 'muse/_snippet-4';
