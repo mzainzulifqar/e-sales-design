@@ -2890,31 +2890,20 @@ body{
 }
 
 // 15-snppet-three-col-section-image
-body{
-  &.snppet-three-col-section{
-      padding: 0;
-      margin: 0;
-      height: 100%;
-  }
-}
+
 .snppet-three-col-section{
-    height: 100vh;
     position: relative;
-    padding: 5vh 0;
-    overflow: hidden;
-    
     .image{
       text-align: center;
       img{
         width: 28vw;
-        height: 28vw;
+        height: 60vh;
         object-fit: contain;
       }
     }
 
     .list-content {
-      padding: 0px 25px;
-      margin-bottom: 40px;
+      padding: clamp(1rem,3vh,2rem) clamp(1.5rem,5vh,3rem);
       &:last-child{
         margin-bottom: 0;
       }

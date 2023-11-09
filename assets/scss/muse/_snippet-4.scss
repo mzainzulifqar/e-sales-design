@@ -1,16 +1,70 @@
 .max-90{
-  @include media-breakpoint-up(md){
-    max-width: 90%;
+  @include media-breakpoint-up(lg){
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1776px;
   }
 }
-.black-box-content{
-  max-width: 700px;
+.bg-gray-250{
+  background-color: $gray-250;
+}
+.muse-section{
+  .section-title {
+    @include media-breakpoint-up(lg){
+      // font-size: clamp(1.8rem, 4.3vh, 2.5rem);
+      font-size: clamp(1.8rem,5vh,3rem);
+    }
+  }
+  .section-sub-title{
+    @include media-breakpoint-up(lg){
+      // font-size: clamp(1.4rem, 4.3vh, 1.8rem);
+      font-size: clamp(1.4rem,3.5vh,2rem);
+    }
+  }
+}
+
+.partner-adv-section{
+  padding: 5vh 0;
+  @include media-breakpoint-up(lg){
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  h4 {
+    line-height: 1.4;
+    @include media-breakpoint-up(lg){
+      font-size: clamp(1rem, 2.6vh, 1.5rem);
+    }
+  }
+}
+.black-box-content{ 
   border-top-right-radius: 15px;
+  @include media-breakpoint-up(lg){
+    max-width: 800px;
+  }
+  p{
+    font-size: 1rem;
+    line-height: 1.5;
+    @include media-breakpoint-up(lg){
+      font-size: clamp(0.825rem, 2.2vh, 1.5rem);
+    }
+  }
 }
 .partner-adv-list-box{
   border-top-right-radius: 20px;
-  @include media-breakpoint-up(md){
+  padding: 20px;
+  @include media-breakpoint-up(lg){
+    padding: clamp(1rem,3vh,2rem) clamp(1.5rem,5vh,3rem);
+  }
+  @include media-breakpoint-up(lg){
     border-top-right-radius: 30px;
+  }
+  ul{
+    li{
+      &:not(:last-child){
+        margin-bottom: clamp(0.5rem, 2vh, 1rem);
+      }
+    }
   }
 }
 .partner-adv-list-item-box{
@@ -20,55 +74,218 @@
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
+  background-color: $white;
+  @include media-breakpoint-down(lg){
+    border-radius: 20px 20px 0 0;
+    padding: 15px;
+    border-bottom: 0;
+  }
   &:before, &:after{
     content: "";
     position: absolute;
     background-color: $white;
-    height: 10px;
-    width: calc(100% - 18px);
+    height: calc(100% - 15px);
+    width: 6px;
+    @include media-breakpoint-up(lg){
+      height: 10px;
+      width: calc(100% - 18px);
+    }
   }
   &:before{
-    top: -5px;
+    @include media-breakpoint-down(lg){
+      top: 15px;
+      left: -4px;
+    }
+    @include media-breakpoint-up(lg){
+      top: -5px;
+    }
   }
   &::after{
-    bottom: -5px;
+    @include media-breakpoint-down(lg){
+      top: 15px;
+      right: -4px;
+    }
+    @include media-breakpoint-up(lg){
+      bottom: -5px;
+    }
   }
   ul{
     li{
       font-size: 1rem;
+      @include media-breakpoint-up(lg){
+        font-size: clamp(1rem, 2.2vh, 1.25rem);
+      }
       &::marker{
         color: $black;
       }
       &:not(:last-child){
         margin-bottom: 10px;
       }
-      @include media-breakpoint-up(md){
-        font-size: 1.25rem;
-      }
     }
   }
   &.partner-adv-list-item-box-1{
-    border-left: 0;
-    border-radius: 0 20px 20px 0;
-    margin-top: 100px;
+    
+    @media (min-height: 500px){
+      margin-top: 5vh;
+    }
+    @media (min-height: 700px){
+      margin-top: 7vh;
+    }
+    @media (min-height: 800px){
+      margin-top: 10vh;
+    }
+    @media (min-height: 900px){
+      margin-top: 14vh;
+    }
+    @include media-breakpoint-up(lg){
+      border-left: 0;
+      border-radius: 0 20px 20px 0;
+    }
+    @include media-breakpoint-down(lg){
+      margin-top: 30px !important;
+    }
     &:before, &:after{
-      left: 0;
+      @include media-breakpoint-up(lg){
+        left: 0;
+      }
     }
   }
   &.partner-adv-list-item-box-2, &.partner-adv-list-item-box-3{
-    border-right: 0;
-    border-radius: 20px 0 0 20px;
-    margin-top: 100px;
+    @include media-breakpoint-up(lg){
+      border-right: 0;
+      border-radius: 20px 0 0 20px;
+    }
     &:before, &:after{
-      right: 0;
+      @include media-breakpoint-up(lg){
+        right: 0;
+      }
     }
   }
   &.partner-adv-list-item-box-2{
-    margin-top: 45px;
+    margin-top: 7vh;
+    @include media-breakpoint-down(lg){
+      margin-top: 30px;
+    }
 
   }
   &.partner-adv-list-item-box-3{
-    margin-top: 60px;
+    margin-top: 7vh;
+    @include media-breakpoint-down(lg){
+      margin-top: 30px;
+    }
   }
   
+}
+
+.circle-img-wrap {
+  position: relative;
+  img{
+    width: 30vw;
+    height: 63vh;
+    object-fit: contain;
+  }
+}
+
+.circle-line {
+  height: 2px;
+  background-color: $primary;
+  position: absolute;
+  &.circle-line.circle-line-1 {
+      top: 67%;
+      transform: translateY(-50%);
+      left: -5.7vw;
+      width: 20vw;
+      z-index: -1;
+      @media (min-height: 500px){
+        top: 67%;
+      }
+      @media (min-height: 700px){
+        top: 64%;
+      }
+      @media (min-height: 800px){
+        top: 62%;
+      }
+      @media (min-height: 900px){
+        top: 67%;
+      }
+  }
+  &.circle-line.circle-line-2 {
+    top: 26%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -8vw;
+    width: 20vw;
+    z-index: -1;
+    left: auto;
+    @media (min-height: 500px){
+      top: 35%;
+    }
+    @media (min-height: 700px){
+      top: 34%;
+    }
+    @media (min-height: 800px){
+      top: 30%;
+    }
+    @media (min-height: 900px){
+      top: 26%;
+    }
+  }
+  &.circle-line.circle-line-3 {
+    top: 67%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -8vw;
+    width: 20vw;
+    z-index: -1;
+    left: auto;
+    @media (min-height: 500px){
+      top: 67%;
+    }
+    @media (min-height: 700px){
+      top: 64%;
+    }
+    @media (min-height: 800px){
+      top: 62%;
+    }
+    @media (min-height: 900px){
+      top: 67%;
+    }
+  }
+}
+
+.circle-wrap{
+  max-width: 350px;
+  width: 80%;
+  margin: 30px auto;
+  &::after{
+    @include media-breakpoint-down(lg){
+      content: "";
+      position: absolute;
+      background-color: $primary;
+      height: 30px;
+      width: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  .circle-default{
+    border-radius: 9999px;
+    background-color: $gray-200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4{
+      color: $white;
+    }
+    &.circle-gray{
+      background-color: $gray-200;
+    }
+    &.circle-blue{
+      background-color: $primary;
+    }
+    &.circle-black{
+      background-color: $black;
+    }
+  }
 }
