@@ -12791,6 +12791,16 @@ hr {
   border-color: #084bb7 !important;
 }
 
+.border-left-gray {
+  border-color: #949494 !important;
+  border-left: 1px solid;
+}
+
+.border-right-gray {
+  border-color: #949494 !important;
+  border-right: 1px solid;
+}
+
 /* 2. 2. Muse Font Family CSS  */
 .Montserrat-font {
   font-family: "Montserrat", sans-serif;
@@ -13161,6 +13171,14 @@ caption, .caption {
 
 .shadow-dark-bottom {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-nevy-blue {
+  box-shadow: 0 1px 3px #001C6E, 0 1px 2px #001C6E;
+}
+
+.shadow-black-box {
+  box-shadow: 0 1px 3px #000, 0 1px 2px #000;
 }
 
 /* 2. 8. Muse Typography Page CSS */
@@ -20880,6 +20898,11 @@ body.marketing-overview-template {
   z-index: -1;
 }
 
+.center-slider .slick-track {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .marketing-overview-section.slide-two-eight .tab-box ul li.active .box .small-box {
   background-color: #0558ff;
   border: 1px solid #0558ff;
@@ -20936,13 +20959,30 @@ body.marketing-overview-template {
 }
 
 .two-col-box-section img {
-  max-width: 50%;
+  width: 50%;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .two-col-box-section .box {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   border: 5px solid #001C6E;
+}
+
+@media (max-width: 1399.98px) {
+  .two-col-box-section .box {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .two-col-box-section .box {
+    width: 190px;
+    height: 190px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -20973,9 +21013,77 @@ body.marketing-overview-template {
   font-size: 13px;
 }
 
-.center-slider .slick-track {
-  display: -ms-flexbox;
-  display: flex;
+body.snppet-three-col-section {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.snppet-three-col-section {
+  height: 100vh;
+  position: relative;
+  padding: 5vh 0;
+  overflow: hidden;
+}
+
+.snppet-three-col-section .image {
+  text-align: center;
+}
+
+.snppet-three-col-section .image img {
+  width: 28vw;
+  height: 28vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.snppet-three-col-section .list-content {
+  padding: 0px 25px;
+  margin-bottom: 40px;
+}
+
+.snppet-three-col-section .list-content:last-child {
+  margin-bottom: 0;
+}
+
+.snppet-two-col-section {
+  height: 100vh;
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.snppet-two-col-section .content {
+  padding: 0 50px;
+}
+
+.snppet-two-col-section .content .list-content ul li {
+  margin: 10px 0;
+}
+
+.snppet-two-col-section .content .list-second {
+  padding-top: 50px;
+}
+
+.snppet-image-content-col-section {
+  height: 100vh;
+  position: relative;
+  padding: 5vh 0;
+  overflow: hidden;
+}
+
+.snppet-image-content-col-section .overview_image img {
+  width: 14vw;
+  height: 25vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.snppet-image-content-col-section .overview_content .arrow img {
+  width: 14vw;
+  height: 3vw;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 768px) {

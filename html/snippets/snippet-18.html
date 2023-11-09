@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Snippet 29</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template">
+
+<!-- three-col-section snppet-29-->
+<section class="muse-section snppet-two-col-section d-flex align-items-center">
+    <div class="container-fluid max-90">
+        <div class="row pb-5 justify-content-between align-items-center">
+            <div class="col-12 col-lg-6 heading">
+                <div class="heading">
+                    <h3 class="mt-3 mt-md-0 mb-2 h1 font-weight-medium">Program Overview</h3>
+                    <h4 class="mt-3 text-blue-600  mt-md-0 mb-2 h2 font-weight-semibold ">Client Resource Center </h3>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="bg-black text-white px-5 py-3 black-box-content ms-lg-auto">
+                Front-line employees have 24/7 online access to support all aspects of the credit card program.
+                </div>
+            </div>
+        </div> 
+        
+
+        <div class="row justify-content-between ">
+            
+          <div class="col-12 col-lg-6">
+                  <div class="image text-center"> 
+                  <img class="" src="../../assets/img/templates/laptop-side.png" alt="Laptopside">
+              </div>
+          </div>
+
+            <div class="col-12 col-lg-6 pt-5">
+                <div class="row">
+                    
+                    <div class="col-12 col-lg-6 border-right-gray">
+                      <div class="content"> 
+                        <div class="list-content list-first">
+                            <h5 class="text-blue-600 ">Servicing</h5>
+                            <ul class="text-black  m-0">
+                                <li class="">Cardmember account access</li>
+                                <li class="">Payment scheduling & posting</li>
+                            </ul>
+                        </div>
+
+                        <div class="list-content list-second">
+                            <h5 class="text-blue-600 ">Reporting</h5>
+                            <ul class="text-black  m-0">
+                                <li class="">Application status overview</li>
+                                <li class="">Cardmember lists</li>
+                                <li class="">Management reports</li>
+                                <li class="">Audit reports</li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <div class="content"> 
+                        <div class="list-content list-third">
+                            <h5 class="text-blue-600 ">Accessibility</h5>
+                            <ul class="text-black  m-0">
+                                <li class="">Hierarchy-based access</li>
+                                <li class="">Quick application processing</li>
+                                <li class="">Employee training & resources</li>
+                                <li class="">Application status tracking</li>
+                                <li class="">Campaign results monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+  
+  //Muse Swipper JavaScript
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+</script>
+</body>
+</html>

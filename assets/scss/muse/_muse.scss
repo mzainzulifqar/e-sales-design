@@ -724,6 +724,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .display-1, .display-2, .d
 .text-mainly-blue {
   color: $mainly-blue;
 }
+
 /* 2.  1.  4. Muse Border Color CSS */
 hr {
   border-color: $gray-300;
@@ -1076,6 +1077,14 @@ hr {
 .border-blue {
   border-color: $blue !important;
 }
+.border-left-gray{
+  border-color: $grey-fruit-salad !important;
+  border-left: 1px solid;
+}
+.border-right-gray{
+  border-color: $grey-fruit-salad !important;
+  border-right: 1px solid;
+}
 /* 2. 2. Muse Font Family CSS  */
 .Montserrat-font {
   font-family: $montserrat-font;
@@ -1360,6 +1369,12 @@ caption, .caption {
 }
 .shadow-dark-bottom {
   box-shadow: 0 6px 12px rgba($black, 0.4);
+}
+.shadow-nevy-blue {
+  box-shadow: 0 1px 3px $blur-nevy-box, 0 1px 2px $blur-nevy-box;
+}
+.shadow-black-box {
+  box-shadow: 0 1px 3px $black, 0 1px 2px $black;
 }
 /* 2. 8. Muse Typography Page CSS */
 .Fabrx-components {
@@ -2764,6 +2779,13 @@ body{
   }
 }
 
+// slider css 
+.center-slider {
+  .slick-track{
+    display: flex;
+  }
+}
+
 //marketing-overview slide
 .marketing-overview-section{
   &.slide-two-eight{
@@ -2829,15 +2851,22 @@ body{
     }
   } 
   img{
-    max-width: 50%;
-    @include media-breakpoint-down(md) { 
-
-    }
+    width: 50%;
+    height: 80px;
+    object-fit: contain;
   }
   .box {
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
     border: 5px solid $blur-nevy-box;
+    @include media-breakpoint-down(xxl) { 
+      width: 200px;
+      height: 200px;
+    }
+    @include media-breakpoint-down(xl) { 
+      width: 190px;
+      height: 190px;  
+    }
     @media (min-width: 768px) and (max-width: 992px){
       width: 130px;
       height: 130px;
@@ -2860,8 +2889,92 @@ body{
   }
 }
 
-.center-slider {
-  .slick-track{
-    display: flex;
+// 15-snppet-three-col-section-image
+body{
+  &.snppet-three-col-section{
+      padding: 0;
+      margin: 0;
+      height: 100%;
   }
+}
+.snppet-three-col-section{
+    height: 100vh;
+    position: relative;
+    padding: 5vh 0;
+    overflow: hidden;
+    
+    .image{
+      text-align: center;
+      img{
+        width: 28vw;
+        height: 28vw;
+        object-fit: contain;
+      }
+    }
+
+    .list-content {
+      padding: 0px 25px;
+      margin-bottom: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      
+  }
+}
+
+
+// 18 snppet-two-col-section 
+.snppet-two-col-section{
+    height: 100vh;
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+    .content{
+      padding: 0 50px;
+      .list-content {
+        ul{
+          li{
+            margin: 10px 0;
+          }
+        }
+      }
+      .list-second {
+        padding-top: 50px;
+      }
+    }
+}
+
+// 21 snppet-image-content-col-section
+.snppet-image-content-col-section{
+    height: 100vh;
+    position: relative;
+    padding: 5vh 0;
+    overflow: hidden;
+
+    .overview_image{
+      img{
+        width: 14vw;
+        height: 25vw;
+        object-fit: contain;
+      }
+    }
+
+    .overview_content{
+      // padding-left: clamp(1.2rem,5.5vh,1rem);
+      // padding-right: clamp(1.2rem,5.5vh,1rem);
+      .content{
+        p{
+          //font-size: clamp(0.875rem,5.5vh,2rem);
+          // font-size: clamp(0.875rem, 0.7917rem + 0.1111vw, 1rem);
+        }
+      }
+      .arrow{
+        img{
+          width: 14vw;
+          height: 3vw;
+          object-fit: contain;
+        }
+      }
+      
+    }
 }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Snippet 15</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template snppet-three-col-section">
+
+<!-- three-col-section snppet-15-->
+<section class="muse-section snppet-three-col-section d-flex align-items-center">
+    <div class="container-fluid max-90">
+    
+    <div class="row pb-5 justify-content-between align-items-center">
+      <div class="col-12 col-lg-6 heading">
+        <div class="heading">
+            <h3 class="mt-3 mt-md-0 mb-2 h1 font-weight-medium">Elan Partnership Advantage</h3>
+            <h4 class="mt-3 text-blue-600  mt-md-0 mb-2 h2 font-weight-semibold ">Outsourced credit card issuing</h3>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="bg-black text-white px-5 py-3 black-box-content ms-lg-auto">
+            Elan’s seamless integration and managed services empower your institution, driving growth and stability with a customer-centric approach.
+        </div>
+      </div>
+    </div> 
+
+    <div class="row mt-5 justify-content-between align-items-center">
+        <div class="col-12 col-lg-5">
+            <div class="image"> 
+                <img src="../../assets/img/templates/partnership.png" alt="Partnership" >
+            </div>
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-12 col-lg-6 border-left-gray">
+                    <div class="list-content">
+                        <h5 class="text-blue-600 "> Integrations & Management</h5>
+                        <ul class="text-black  m-0">
+                            <li class="mt-3">
+                                Control the cardmember experience with our multiple integration points, delivering data through batch files and APIs. 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-content">
+                        <h5 class="text-blue-600 "> Partner Brand Marketing</h5>
+                        <ul class=" text-black m-0">
+                            <li class="mt-3">
+                                Expand your reach with Elan's multichannel strategy, covering branch, digital, and direct marketing, all managed and funded by Elan.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-content">
+                        <h5 class="text-blue-600 ">Card Product Suite</h5>
+                        <ul class=" text-black m-0">
+                            <li class="mt-3">
+                                Attract diverse segments with our suite of reward and non-reward products, offering high value propositions, all managed and funded by Elan. 
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+
+                <div class="col-12 col-lg-6 border-left-gray">
+                    <div class="list-content">
+                        <h5 class="text-blue-600 "> Cardmember Servicing</h5>
+                        <ul class="text-black  m-0">
+                            <li class="mt-3">
+                                Experience 24/7 U.S. based servicecenters with Elan, managing digital interactions, providing tools, and driving everyday usage through ongoing campaigns. 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-content">
+                        <h5 class="text-blue-600 "> Expense and Risk Management</h5>
+                        <ul class="text-black  m-0">
+                            <li class="mt-3">
+                                Leverage Elan’s scale to eliminate card program expenses and all risks including credit, fraud, and compliance, enhancing efficiency
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-content">
+                        <h5 class="text-blue-600 ">True Fee Income Mode</h5>
+                        <ul class="text-black  m-0">
+                            <li class="mt-3">
+                                Trade volatility for stability with our card asset sale, creating a long-term steady fee income stream without credit and expense risks.
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+  
+  //Muse Swipper JavaScript
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+</script>
+</body>
+</html>
