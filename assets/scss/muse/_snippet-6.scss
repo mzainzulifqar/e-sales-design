@@ -1,0 +1,72 @@
+.muse-default-padding{
+  padding: 5vh 0;
+}
+.financial-table-section{
+  @include media-breakpoint-up(lg){
+    height: 100vh;
+    overflow: hidden;
+  }
+  .financial-table{
+    margin-top: 30px;
+    @media (min-height: 500px){
+      margin-top: 4vh;
+    }
+    @media (min-height: 700px){
+      margin-top: 5vh;
+    }
+    @media (min-height: 800px){
+      margin-top: 6vh;
+    }
+    h4 {
+      line-height: 1.4;
+      @include media-breakpoint-up(lg){
+        font-size: clamp(1rem, 2.6vh, 1.5rem);
+      }
+    }
+    .financial-tbl-head{
+      padding: 30px 15px;
+      min-height: 20vh;
+      @include media-breakpoint-up(lg){
+        padding: clamp(1rem,3vh,4rem) 0.85rem;
+      }
+      p{
+        line-height: 1.4;
+        @include media-breakpoint-up(lg){
+          font-size: clamp(0.8rem,2vh,1rem);
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .financial-tbl-option{
+      background-color: rgba($color: $gray-250, $alpha: 0.12);
+      padding: 1.25rem;
+      @include media-breakpoint-up(lg){
+        height: 100%;
+        padding: 0.5rem 1.25rem;
+      }
+    }
+    .financial-tbl-objective {
+      background-color: rgba($color: $gray-250, $alpha: 0.3);
+      padding: 1.25rem;
+      @include media-breakpoint-up(lg){
+        height: 100%;
+        padding: 0.5rem 1.25rem;
+      }
+    }
+    ul{
+      padding-left: 18px;
+      li{
+        font-size: 1rem;
+        @include media-breakpoint-up(lg){
+          font-size: clamp(0.8rem,2vh,1rem);
+        }
+        &:not(:last-child){
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
