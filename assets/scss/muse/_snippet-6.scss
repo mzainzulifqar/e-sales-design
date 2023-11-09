@@ -9,10 +9,7 @@
   .financial-table{
     margin-top: 30px;
     @media (min-height: 500px){
-      margin-top: 4vh;
-    }
-    @media (min-height: 700px){
-      margin-top: 5vh;
+      margin-top: 3vh;
     }
     @media (min-height: 800px){
       margin-top: 6vh;
@@ -60,7 +57,7 @@
       li{
         font-size: 1rem;
         @include media-breakpoint-up(lg){
-          font-size: clamp(0.8rem,2vh,1rem);
+          font-size: clamp(.8rem, 1.8vh, 1rem);
         }
         &:not(:last-child){
           margin-bottom: 5px;

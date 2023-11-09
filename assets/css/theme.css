@@ -21497,13 +21497,7 @@ body.marketing-overview-template {
 
 @media (min-height: 500px) {
   .financial-table-section .financial-table {
-    margin-top: 4vh;
-  }
-}
-
-@media (min-height: 700px) {
-  .financial-table-section .financial-table {
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 }
 
@@ -21582,7 +21576,7 @@ body.marketing-overview-template {
 
 @media (min-width: 992px) {
   .financial-table-section .financial-table ul li {
-    font-size: clamp(0.8rem, 2vh, 1rem);
+    font-size: clamp(0.8rem, 1.8vh, 1rem);
   }
 }
 
