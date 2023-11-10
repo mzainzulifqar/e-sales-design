@@ -21583,3 +21583,286 @@ body.marketing-overview-template {
 .financial-table-section .financial-table ul li:not(:last-child) {
   margin-bottom: 5px;
 }
+
+.bg-green-1 {
+  background-color: #398245;
+}
+
+.bg-cyan-1 {
+  background-color: #006c95;
+}
+
+.bg-purple-1 {
+  background-color: #50307f;
+}
+
+.bg-dark-green-1 {
+  background-color: #2e654b;
+}
+
+.bg-blue-1 {
+  background-color: #001e79;
+}
+
+.bg-orange-1 {
+  background-color: #ae6c24;
+}
+
+.bg-gray-slat-1 {
+  background-color: #0b3d5c;
+}
+
+.bg-red-dark-1 {
+  background-color: #743130;
+}
+
+.bg-gray-slat-2 {
+  background-color: #766d66;
+}
+
+.bg-orange-2 {
+  background-color: #c34613;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.product-overview-section .product-overview-table {
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table {
+    margin-top: 5vh;
+  }
+}
+
+.product-overview-section .product-overview-table p, .product-overview-section .product-overview-table ul li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table p, .product-overview-section .product-overview-table ul li {
+    font-size: clamp(0.825rem, 1.8vh, 1rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .product-overview-left-title {
+    width: 130px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-overview-section .product-overview-table .product-overview-left-title {
+    width: 188px;
+  }
+}
+
+.product-overview-section .product-overview-table .product-overview-left-title .prouct--overview-left-title {
+  background-color: #dddddd;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #464646;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .product-overview-left-title .prouct--overview-left-title {
+    font-size: clamp(0.825rem, 2.2vh, 1rem);
+    border-left: 1px solid #ADB5BD;
+    border-bottom: 1px solid #ADB5BD;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .product-overview-section .product-overview-table .product-overview-right-content > .row {
+    margin-bottom: -20px;
+  }
+  .product-overview-section .product-overview-table .product-overview-right-content > .row .prouct-overview-col {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .product-overview-right-content {
+    -ms-flex: 1;
+        flex: 1;
+    border: 1px solid #ADB5BD;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .prouct-overview-col:not(:first-child) {
+    border-left: 1px solid #ADB5BD;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-cell {
+  padding: clamp(0.7rem, 1.8vh, 2rem);
+}
+
+.product-overview-section .product-overview-table .prouct-overview-cell p:last-child {
+  margin-bottom: 0;
+}
+
+.product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+  text-align: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 60px;
+  line-height: 1.4;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  padding: clamp(0.85rem, 2vh, 2rem);
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+    font-size: clamp(1rem, 2.2vh, 1.25rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+    height: auto;
+  }
+}
+
+.business-credit-cards-table-section.product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+  height: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .business-credit-cards-table-section.product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+    height: auto;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-content {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+@media (max-width: 1199.98px) {
+  .product-overview-section .product-overview-table .prouct-overview-content {
+    border: 1px solid #ADB5BD;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-content .prouct-overview-cell:not(:last-child) {
+  border-bottom: 1px solid #ADB5BD;
+}
+
+.product-overview-section .product-overview-table .prouct-overview-detail-cell {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .prouct-overview-detail-cell p:not(:last-child) {
+    margin-bottom: 2vh;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-benifit-cell {
+  /* flex: 1; */
+  height: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .prouct-overview-benifit-cell {
+    height: 70px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-overview-section .product-overview-table .prouct-overview-benifit-cell {
+    height: 80px;
+  }
+  .business-credit-cards-table-section.product-overview-section .product-overview-table .prouct-overview-benifit-cell {
+    height: 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .product-overview-section .product-overview-table .prouct-overview-benifit-cell {
+    height: auto;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-redemptions-cell {
+  height: 133px;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+@media (max-width: 767.98px) {
+  .product-overview-section .product-overview-table .prouct-overview-redemptions-cell {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-overview-section .product-overview-table .prouct-overview-redemptions-cell {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-overview-section .product-overview-table .prouct-overview-redemptions-cell {
+    height: 133px;
+  }
+}
+
+.product-overview-section .product-overview-table .prouct-overview-redemptions-cell p, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell ul, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell ol, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell span, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell strong {
+  color: #fff;
+}
+
+.product-overview-section .product-overview-table .prouct-overview-redemptions-cell p:last-child, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell ul:last-child, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell ol:last-child, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell span:last-child, .product-overview-section .product-overview-table .prouct-overview-redemptions-cell strong:last-child {
+  margin-bottom: 0;
+}
+
+.product-overview-section .product-overview-table .prouct-overview-redemptions-cell ul {
+  width: 100%;
+  padding-left: 19px;
+}
+
+.product-overview-section .product-overview-table .prouct-overview-redemptions-cell p {
+  text-align: center;
+}
