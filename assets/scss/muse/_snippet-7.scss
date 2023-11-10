@@ -1,0 +1,203 @@
+.bg-green-1{
+  background-color: $green-1;
+}
+.bg-cyan-1{
+  background-color:$cyan-1;
+}
+.bg-purple-1{
+  background-color: $purple-1;
+}
+.bg-dark-green-1{
+  background-color: $dark-green-1;
+}
+.bg-blue-1{
+  background-color: $blue-1;
+}
+.bg-orange-1{
+  background-color: $orange-1;
+}
+.bg-gray-slat-1{
+  background-color: $gray-slat-1;
+}
+.bg-red-dark-1{
+  background-color: $red-dark-1;
+}
+.bg-gray-slat-2{
+  background-color: $gray-slat-2;
+}
+.bg-orange-2{
+  background-color: $orange-2;
+}
+
+.product-overview-section{
+  @include media-breakpoint-up(xl){
+    height: 100vh;
+    overflow: hidden;
+  }
+  .product-overview-table {
+    margin-top: 30px;
+    @include media-breakpoint-up(xl){
+      margin-top: 5vh;
+    }
+    p, ul li{
+      font-size: 1rem;
+      line-height: 1.5;
+      @include media-breakpoint-up(xl){
+        font-size: clamp(.825rem,1.8vh,1rem);
+      }
+    }
+    .product-overview-left-title{
+      @include media-breakpoint-up(xl){
+        width: 130px;
+      }
+      @include media-breakpoint-up(xxl){
+        width: 188px;
+      }
+      .prouct--overview-left-title{
+        background-color: $gray-350;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+        text-align: center;
+        font-weight: bold;
+        color: $black-400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media-breakpoint-up(xl){
+          font-size: clamp(0.825rem, 2.2vh, 1rem);
+          border-left: 1px solid $gray-150;
+          border-bottom: 1px solid $gray-150;
+        }
+      }
+    }
+    .product-overview-right-content{
+      > .row{
+        @include media-breakpoint-down(xl){
+          margin-bottom: -20px;
+          .prouct-overview-col{
+            margin-bottom: 20px;
+          }
+        }
+      }
+      @include media-breakpoint-up(xl){
+        flex: 1;
+        border: 1px solid $gray-150;
+      }
+    }
+    .prouct-overview-col {
+      @include media-breakpoint-up(xl){
+        &:not(:first-child){
+          border-left: 1px solid $gray-150;
+        }
+        
+      }
+    }
+    .prouct-overview-cell{
+      padding: clamp(0.7rem,1.8vh,2rem);
+      p{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      &.product-overview-head {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        line-height: 1.4;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: $white;
+        padding: clamp(0.85rem,2vh,2rem);
+        @include media-breakpoint-up(xl){
+          font-size: clamp(1rem, 2.2vh, 1.25rem);
+        }
+        @include media-breakpoint-down(md){
+          height: auto;
+        }
+        @at-root .business-credit-cards-table-section#{&} {
+          height: 80px;
+          @include media-breakpoint-down(md){
+            height: auto;
+          }
+        }
+      }
+    }
+    .prouct-overview-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      @include media-breakpoint-down(xl){
+        border: 1px solid $gray-150;
+      }
+      .prouct-overview-cell:not(:last-child) {
+        border-bottom: 1px solid $gray-150;
+      } 
+    }
+    .prouct-overview-detail-cell {
+      flex: 1;
+      p{
+        @include media-breakpoint-up(xl){
+          &:not(:last-child){
+            margin-bottom: 2vh;
+          }
+        }
+      }
+    }
+    .prouct-overview-benifit-cell {
+      /* flex: 1; */
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include media-breakpoint-up(xl){
+        height: 70px;
+      }
+      @include media-breakpoint-up(xxl){
+        height: 80px;
+        @at-root .business-credit-cards-table-section#{&} {
+          height: 90px;
+        }
+      }
+      @include media-breakpoint-down(md){
+        height: auto;
+      }
+    }
+    .prouct-overview-redemptions-cell {
+      height: 133px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include media-breakpoint-down(md){
+        height: auto;
+      }
+      @include media-breakpoint-up(xl){
+        height: 100px;
+      }
+      @include media-breakpoint-up(xxl){
+        height: 133px;
+      }
+      p, ul, ol, span, strong{
+        color: $white;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      ul{
+        width: 100%;
+        padding-left: 19px;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+
+  
+}
+
