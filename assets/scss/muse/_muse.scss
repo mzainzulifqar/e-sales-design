@@ -2669,12 +2669,11 @@ body{
   //     max-width: 1320px;
   // }
   position: relative;
-  height: calc(80vh - 0px);
-  // height: 100vh;
+  height: 80vh;
   @include media-breakpoint-down(lg) {
     height: calc(80vh - -120px);
   }
-  .shapf{
+  .shape{
       height: 100%;
       background-color: $white-smoke;
       position: absolute;
@@ -2759,7 +2758,7 @@ body{
                   }  
                   .small-box-content{
                       p{
-                          font-size: 10px;
+                          font-size: 12px;
                           line-height: 1.2;
                           display: inline-block;
                           margin: 10px 0 0;
@@ -2818,7 +2817,6 @@ body{
 .Disclosure-section{
   height: 100vh;
   position: relative;
-  padding: 30px 0;
   .content{
     p{
       a{
@@ -2831,7 +2829,6 @@ body{
 
 // two-col-box-section
 .two-col-box-section{
-  height: 100vh;
   position: relative;
   padding: 0 0;
   @include media-breakpoint-down(lg) { 
@@ -2890,80 +2887,284 @@ body{
 }
 
 // 15-snppet-three-col-section-image
-
 .snppet-three-col-section{
     position: relative;
+    padding: 5vh 0;
+    @include media-breakpoint-up(xl) {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .black-box-content{
+      @include media-breakpoint-up(lg) { 
+        max-width: 900px;
+       }
+    }
+
+    .black-box-content {
+      @include media-breakpoint-down(lg) {
+        margin: 10px 0px;
+      }
+    }
+    
+    .card-management{
+      margin-top: 4vh;
+    }
+    
+    .boder-left-hide{
+      @include media-breakpoint-down(xl) { 
+        border: none;  
+      }
+    }
+
+    .border-right-hide{
+      @include media-breakpoint-down(lg){
+        border: none; 
+      }
+    }
+
+
     .image{
       text-align: center;
       img{
-        width: 28vw;
-        height: 60vh;
+        width: 27vw;
+        height: 54vh;
         object-fit: contain;
+        @include media-breakpoint-down(xl) { 
+            max-width: 80%;
+            width: inherit;
+            height: auto;
+         }
       }
     }
-
-    .list-content {
-      padding: clamp(1rem,3vh,2rem) clamp(1.5rem,5vh,3rem);
-      &:last-child{
-        margin-bottom: 0;
+    h4{
+      line-height: 1.4;
+      &.heading-title{
+        @include media-breakpoint-up(xl) {
+          font-size: clamp(1rem, 2vh, 1.5rem);
+          margin-bottom: 0 !important;
+        }
       }
-      
-  }
+    }
+    .list-content {
+        padding: 0 clamp(1rem,2.5vh,2rem) clamp(1rem,2vh,3rem);
+        h4{
+          @include media-breakpoint-up(xxl) { 
+            font-size: clamp(1rem, 2vh, 1.5rem);
+            margin-bottom: 0 !important;
+          }
+        }
+        ul{
+          li{
+            font-size: clamp(0.8rem, 1.8vh, 1rem);
+          }
+        }
+    }
 }
 
 
-// 18 snppet-two-col-section 
+// 29snppet-two-col-section 
 .snppet-two-col-section{
-    height: 100vh;
     position: relative;
-    padding: 50px 0;
-    overflow: hidden;
-    .content{
-      padding: 0 50px;
-      .list-content {
-        ul{
-          li{
-            margin: 10px 0;
-          }
+    padding: 5vh 0;
+    @include media-breakpoint-up(xl) {
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .black-box-content{
+      @include media-breakpoint-up(lg) { 
+        max-width: 900px;
+       }
+    }
+    .card-management{
+      margin-top: 5vh;
+    }
+
+    h4{
+      line-height: 1.4;
+      &.heading-title{
+        @include media-breakpoint-up(xl) {
+          font-size: clamp(1rem, 2vh, 1.5rem);
+          margin-bottom: 0 !important;
         }
       }
-      .list-second {
-        padding-top: 50px;
-      }
     }
+    
+    .list-content {
+        padding: 0 clamp(1rem,2.5vh,2rem) clamp(1rem,2vh,3rem);
+        h4{
+          @include media-breakpoint-up(xl) { 
+            font-size: clamp(1rem, 2vh, 1.5rem);
+            
+          }
+        }
+        ul{
+          li{
+            font-size: clamp(0.8rem, 1.8vh, 1rem);
+            margin-bottom: clamp(0.8rem,1.8vh,1rem);
+          }
+        }
+    }
+}
+
+.client-resource-center{
+  .image{
+    img{
+      width: 43vw;
+      height: 60vh;
+      object-fit: contain;
+      @include media-breakpoint-down(xl) { 
+        max-width: 80%;
+        width: inherit;
+        height: auto;
+     }
+    }
+  }
+  .border-right-hide{
+    @include media-breakpoint-down(md) { 
+      border: 0;
+    }
+  }
 }
 
 // 21 snppet-image-content-col-section
 .snppet-image-content-col-section{
+  position: relative;
+  padding: 5vh 0;
+  
+  @include media-breakpoint-up(lg) {
     height: 100vh;
-    position: relative;
-    padding: 5vh 0;
     overflow: hidden;
+  }
 
-    .overview_image{
+  h4{
+    &.heading-title{
+      line-height: 1.4;
+      &.heading-title{
+        @include media-breakpoint-up(lg) {
+          font-size: clamp(1rem, 2vh, 1.5rem);
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  .card-management{
+    margin-top: 5vh;
+  }
+  .overview_image{
       img{
         width: 14vw;
         height: 25vw;
         object-fit: contain;
+        @include media-breakpoint-down(lg) {
+          max-width: 100% !important;
+          height: auto;
+          width: inherit;
+        }
       }
     }
 
     .overview_content{
-      // padding-left: clamp(1.2rem,5.5vh,1rem);
-      // padding-right: clamp(1.2rem,5.5vh,1rem);
-      .content{
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0;
+      }
+      .content{ 
+          // @include media-breakpoint-down(lg) {
+          //   padding-top: 70px;
+          // }
+          // @include media-breakpoint-down(sm) { 
+          //   padding-top: 70px;
+          // }
         p{
-          //font-size: clamp(0.875rem,5.5vh,2rem);
-          // font-size: clamp(0.875rem, 0.7917rem + 0.1111vw, 1rem);
+          @include media-breakpoint-up(lg) { 
+            font-size: clamp(.8rem,1.8vh,1rem);
+          }
+          @include media-breakpoint-down(lg){
+            text-align: center;
+            max-width: 223px;
+            margin: 0 auto;
+          }
         }
+
       }
       .arrow{
+        @include media-breakpoint-down(lg) {
+          padding: 70px 0;
+        }
         img{
           width: 14vw;
           height: 3vw;
           object-fit: contain;
+          @include media-breakpoint-down(lg) {
+              height: auto;
+              transform: rotate(90deg);
+              max-width: 173px;
+              width: inherit;
+          }
+          // @include media-breakpoint-down(sm) { 
+          //   width: 175px;
+          //   height: auto;
+          //   object-fit: inherit;
+          // }
+        }
+
+        &.none-arrow{
+          @include media-breakpoint-down(lg) {
+            padding: 0 0;
+          }
         }
       }
       
     }
+}
+
+// 24 two-col-section
+.marketing-strategies{
+  .heading-title{
+    &.box-title{
+      padding: 0 0 clamp(1rem,3.9vh,3rem) 0;
+    }
+  }
+  .list-content {
+    h4{
+      &.heading-title{
+        padding: 0 0 clamp(1rem,2.5vh,3rem) 0;
+      }
+    }
+    ul{
+      li{
+        margin: 0 0 clamp(1rem,0.2vh,3rem) 0 !important;
+        &:not(:last-child){
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+// 30 two-col-section
+.partner-management{
+  .image {
+    img{
+      width: 40vw;
+      @include media-breakpoint-down(xl) { 
+        max-width: 80%;
+        width: inherit;
+        height: auto;
+      }
+    }
+  }
+  .spacing_content{
+    ul{
+      li{
+        margin: 0 0 clamp(1rem,0.2vh,3rem) 0 !important;
+        &:not(:last-child){
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }

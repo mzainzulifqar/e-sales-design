@@ -1,3 +1,5 @@
+
+$grey-bg: #b3b3b3;
 .max-90{
   @include media-breakpoint-up(lg){
     padding-left: 50px;
@@ -279,7 +281,7 @@
       color: $white;
     }
     &.circle-gray{
-      background-color: $gray-200;
+      background-color: $grey-bg;
     }
     &.circle-blue{
       background-color: $primary;
