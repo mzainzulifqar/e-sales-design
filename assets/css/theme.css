@@ -22023,6 +22023,12 @@ body.marketing-overview-template {
 
 @media (min-width: 1200px) {
   .product-overview-section .product-overview-table .prouct-overview-detail-cell p:not(:last-child) {
+    margin-bottom: 1.2vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-overview-section .product-overview-table .prouct-overview-detail-cell p:not(:last-child) {
     margin-bottom: 2vh;
   }
 }

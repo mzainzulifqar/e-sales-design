@@ -101,7 +101,6 @@ body{
         &:not(:first-child){
           border-left: 1px solid $gray-150;
         }
-        
       }
     }
     .prouct-overview-cell{
@@ -154,6 +153,11 @@ body{
       flex: 1;
       p{
         @include media-breakpoint-up(xl){
+          &:not(:last-child){
+            margin-bottom: 1.2vh;
+          }
+        }
+        @include media-breakpoint-up(xxl){
           &:not(:last-child){
             margin-bottom: 2vh;
           }
