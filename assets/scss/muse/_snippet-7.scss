@@ -28,15 +28,26 @@
 .bg-orange-2{
   background-color: $orange-2;
 }
-
-.product-overview-section{
-  @include media-breakpoint-up(xl){
-    height: 100vh;
-    overflow: hidden;
+body{
+  .muse-section{
+    &.muse-default-padding{
+      @include media-breakpoint-up(xl){
+        padding: 0;
+      }
+    }
   }
+}
+.product-overview-section{
+  // @include media-breakpoint-up(xl){
+  //   height: calc(100vh - 118px);
+  //   overflow: hidden;
+  // }
   .product-overview-table {
     margin-top: 30px;
     @include media-breakpoint-up(xl){
+      margin-top: 2vh;
+    }
+    @include media-breakpoint-up(xxl){
       margin-top: 5vh;
     }
     p, ul li{
@@ -90,7 +101,6 @@
         &:not(:first-child){
           border-left: 1px solid $gray-150;
         }
-        
       }
     }
     .prouct-overview-cell{
@@ -112,6 +122,9 @@
         color: $white;
         padding: clamp(0.85rem,2vh,2rem);
         @include media-breakpoint-up(xl){
+          font-size: clamp(1rem,1.5vh,1.2rem);
+        }
+        @include media-breakpoint-up(xxl){
           font-size: clamp(1rem, 2.2vh, 1.25rem);
         }
         @include media-breakpoint-down(md){
@@ -141,6 +154,11 @@
       p{
         @include media-breakpoint-up(xl){
           &:not(:last-child){
+            margin-bottom: 1.2vh;
+          }
+        }
+        @include media-breakpoint-up(xxl){
+          &:not(:last-child){
             margin-bottom: 2vh;
           }
         }
@@ -154,7 +172,7 @@
       justify-content: center;
       text-align: center;
       @include media-breakpoint-up(xl){
-        height: 70px;
+        height: 64px;
       }
       @include media-breakpoint-up(xxl){
         height: 80px;
