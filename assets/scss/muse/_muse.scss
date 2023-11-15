@@ -3168,3 +3168,62 @@ body{
     }
   }
 }
+
+// 25 slide
+.comprehensive-annual-marketing-strategy{
+
+.list-content {
+      padding: 0 clamp(0.5rem,1.5vh,2rem) clamp(0.5rem,1.5vh,3rem);
+      ul{
+        li{
+          @include media-breakpoint-down(md) { 
+            font-size: 16px; 
+        }
+      }
+    }
+  }
+
+  .image {
+    img{
+      width: 50vw;
+      height: 60vh;
+      object-fit: contain;
+      @include media-breakpoint-down(xl) { 
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+//26 slide
+.content{
+  ul{
+    li{
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//32 slide
+.image{
+  img{
+    &.image_stylesh{
+      border-radius: 0 0 0 50px;
+    }
+  }
+}
+
+// 11 slide 
+.Disclosure-section{
+  p{
+    a{
+      &.tag{
+        font-weight: bold;
+      }
+    }
+  }
+}

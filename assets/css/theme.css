@@ -21294,6 +21294,43 @@ body.marketing-overview-template {
   margin-bottom: 5px;
 }
 
+.comprehensive-annual-marketing-strategy .list-content {
+  padding: 0 clamp(0.5rem, 1.5vh, 2rem) clamp(0.5rem, 1.5vh, 3rem);
+}
+
+@media (max-width: 767.98px) {
+  .comprehensive-annual-marketing-strategy .list-content ul li {
+    font-size: 16px;
+  }
+}
+
+.comprehensive-annual-marketing-strategy .image img {
+  width: 50vw;
+  height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 1199.98px) {
+  .comprehensive-annual-marketing-strategy .image img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.content ul li span {
+  font-weight: bold;
+}
+
+.image img.image_stylesh {
+  border-radius: 0 0 0 50px;
+}
+
+.Disclosure-section p a.tag {
+  font-weight: bold;
+}
+
 @media (min-width: 992px) {
   .max-90 {
     padding-left: 50px;

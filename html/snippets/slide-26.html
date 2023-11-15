@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Snippet 26</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template">
+
+<!-- three-col-section snppet-26-->
+<section class="muse-section snppet-two-col-section d-flex align-items-center client-resource-center comprehensive-annual-marketing-strategy">
+    <div class="container-fluid max-90">
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-6">
+            <h2 class="mb-2 h1 font-weight-medium section-title">Marketing Overview </h2>
+            <h4 class="mt-0 text-blue-600  mt-md-0 mb-2 h2 heading-title font-weight-semibold ">Digital Marketing Strategies</h4>
+        </div>
+        <div class="col-12 col-lg-6 p-lg-0">
+          <div class="bg-black text-white px-4 px-lg-5 py-3 black-box-content ms-lg-auto">
+            <p class="m-0">
+                Elan assists by providing marketing materials in physical and digital formats.  
+            </p>
+          </div>
+        </div>
+      </div>
+        
+        <div class="row  card-management align-items-center">
+            
+          <div class="col-12 col-xl-6 order-xl-0 order-2">
+                <div class="row">
+                    
+                    <div class="col-12 col-md-6 col-xl-6 border-right-gray border-right-hide">
+                      <div class="content"> 
+                        <div class="list-content">
+                            <h4 class="text-blue-600 ">Tailored to your Brand</h4>
+                            <ul class="text-black  m-0">
+                                <li class=""> Seamless integration with your brand</li>
+                                <li class=""> 12 color schemes for alignment</li>
+                                <li class=""> Compliance-approved language for trust </li>
+                            </ul>
+                        </div>
+
+                        <div class="list-content">
+                            <h4 class="text-blue-600 ">Email Program</h4>
+                            <ul class="text-black  m-0">
+                                <li class=""> Supplemental digital strategy</li>
+                                <li class=""> Mirrors direct mail program offers</li>
+                                <li class=""> Flexible participation options</li>
+                            </ul>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-6">
+                      <div class="content"> 
+                        
+                        <div class="list-content ">
+                            <h4 class="text-blue-600 ">Syndicated Marketing Integration</h4>
+                            <ul class="text-black  m-0">
+                                <li class=""> Seamless product information</li>
+                                <li class=""> Automatic updates</li>
+                                <li class=""> Compliance-approved language</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="list-content">
+                          <h4 class="text-blue-600 ">Measurable Success</h4>
+                          <ul class="text-black  m-0">
+                              <li class=""> <span>23% incremental lift </span> with direct mail integration</li>
+                              <li class=""> <span>58% incremental lift </span> for digital new accounts</li>
+                              <li class="">Enhanced reach and conversion through email strategy</li>
+                          </ul>
+                      </div>
+
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-xl-6 d-flex align-items-center pb-xl-0 pb-3 mb-3 mb-xl-0 order-xl-0 order-1">
+            <div class="image text-center mx-auto"> 
+            <img class="" src="../../assets/img/templates/digitalmarketing.png" alt="Digital Marketing">
+            <!-- <img class="" src="https://mojomosiac.s3.us-east-2.amazonaws.com/images-3/1698883349106759392-media.png" alt="Elan laptop"> -->
+            
+        </div>
+    </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Muse Javascript Plugins -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+  
+  //Muse Swipper JavaScript
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+
+</script>
+</body>
+</html>
