@@ -21856,14 +21856,7 @@ body.marketing-overview-template {
 
 @media (min-width: 1200px) {
   body .muse-section.muse-default-padding {
-    padding: 2vh 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .product-overview-section {
-    height: calc(100vh - 124px);
-    overflow: hidden;
+    padding: 0;
   }
 }
 
