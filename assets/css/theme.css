@@ -21855,8 +21855,14 @@ body.marketing-overview-template {
 }
 
 @media (min-width: 1200px) {
+  body .muse-section.muse-default-padding {
+    padding: 2vh 0;
+  }
+}
+
+@media (min-width: 1200px) {
   .product-overview-section {
-    height: 100vh;
+    height: calc(100vh - 124px);
     overflow: hidden;
   }
 }
@@ -21866,6 +21872,12 @@ body.marketing-overview-template {
 }
 
 @media (min-width: 1200px) {
+  .product-overview-section .product-overview-table {
+    margin-top: 2vh;
+  }
+}
+
+@media (min-width: 1400px) {
   .product-overview-section .product-overview-table {
     margin-top: 5vh;
   }
@@ -21967,6 +21979,12 @@ body.marketing-overview-template {
 
 @media (min-width: 1200px) {
   .product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
+    font-size: clamp(1rem, 1.5vh, 1.2rem);
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-overview-section .product-overview-table .prouct-overview-cell.product-overview-head {
     font-size: clamp(1rem, 2.2vh, 1.25rem);
   }
 }
@@ -22030,7 +22048,7 @@ body.marketing-overview-template {
 
 @media (min-width: 1200px) {
   .product-overview-section .product-overview-table .prouct-overview-benifit-cell {
-    height: 70px;
+    height: 64px;
   }
 }
 
