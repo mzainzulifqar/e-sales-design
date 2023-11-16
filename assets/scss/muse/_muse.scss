@@ -2665,13 +2665,19 @@ body{
 }
 
 .marketing-overview-section{
-  // .container{
-  //     max-width: 1320px;
-  // }
   position: relative;
   height: 80vh;
   @include media-breakpoint-down(lg) {
     height: calc(80vh - -120px);
+  }
+  &.small-height{
+    min-height: 60vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+    }
   }
   .shape{
       height: 100%;
@@ -2830,7 +2836,7 @@ body{
 // two-col-box-section
 .two-col-box-section{
   position: relative;
-  padding: 0 0;
+  padding: 20px 0;
   @include media-breakpoint-down(lg) { 
     padding: 40px 0;
   }
@@ -3224,6 +3230,65 @@ body{
       &.tag{
         font-weight: bold;
       }
+    }
+  }
+}
+.boder-left-hide{
+  @include media-breakpoint-down(xl) { 
+    border: none;  
+  }
+}
+.tick-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li{
+    position: relative;
+    padding: 7px 0 7px 20px;
+    font-size: 1.4rem;
+    &:before{
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      display: inline-block;
+      transform: rotate(45deg);
+      height: 18px;
+      width: 9px;
+      border-bottom: 3px solid $black;
+      border-right: 3px solid $black;
+    }
+  }
+}
+
+
+.summary-table{
+  display: flex;
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+  @include media-breakpoint-down(lg) { 
+    flex-direction: column;
+    border-right: none;
+  }
+  &.heading{
+    @include media-breakpoint-down(lg) { 
+      display: none;
+    }
+  }
+  span{
+    display: block;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  div{
+    padding: 10px;
+    border-left: 1px solid $black;
+    @include media-breakpoint-down(lg) { 
+      border: none;
     }
   }
 }

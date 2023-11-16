@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Slide 42</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template">
+
+  <section class="muse-section muse-default-padding product-overview-section d-flex align-items-center">
+    <div class="container-fluid max-90">
+      <div class="row justify-content-between mt-5 mb-5">
+        <div class="col-12 col-lg-8">
+            <h2 class="mb-0 h1 font-weight-medium section-title">Summary & Next Steps</h2>
+            <h3 class="font-weight-bold text-primary section-sub-title mb-0">What to expect throughout this process</h3>
+        </div>
+      </div> 
+      <div class="summary-table bg-black text-white heading">
+        <div class="col-lg-2 text-center"><strong>Steps</strong></div>
+        <div class="col-lg-1 text-center"><strong>Timing</strong></div>
+        <div class="col-lg-8 text-center"><strong>Description</strong></div>
+        <div class="col-lg-1 text-center"><strong>Date</strong></div>
+      </div>
+      <div class="summary-table">
+        <div class="col-lg-2"><strong><span>Steps</span>NDA Execution</strong></div>
+        <div class="col-lg-1"><strong><span>Timing</span>Week 1</strong></div>
+        <div class="col-lg-8"><span><strong>Description</strong></span>Elan Mutual NDA provides reciprocal rights to review and discuss certain proprietary and confidential information related to card issuing</div>
+        <div class="col-lg-1"><span><strong>Date</strong></span>TBD</div>
+      </div>
+      <div class="summary-table">
+        <div class="col-lg-2"><strong><span>Steps</span>Data Package</strong></div>
+        <div class="col-lg-1"><strong><span>Timing</span>Week 1</strong></div>
+        <div class="col-lg-8"><span><strong>Description</strong></span>Key Performance Indicators (KPI) data related to an existing portfolio and financial institution's structure</div>
+        <div class="col-lg-1"><span><strong>Date</strong></span>TBD</div>
+      </div>
+      <div class="summary-table">
+        <div class="col-lg-2"><strong><span>Steps</span>Profit & Loss (P&L)</strong><br>(For asset purchases only)</div>
+        <div class="col-lg-1"><strong><span>Timing</span>Week 2</strong></div>
+        <div class="col-lg-8"><span><strong>Description</strong></span>Share Elan's analysis of the existing portfolio's current and forecasted future cashflows based off the KPI data and other analysis </div>
+        <div class="col-lg-1"><span><strong>Date</strong></span>TBD</div>
+      </div>
+      <div class="summary-table">
+        <div class="col-lg-2"><strong><span>Steps</span>Qualitative Review</strong></div>
+        <div class="col-lg-1"><strong><span>Timing</span>Week 3</strong></div>
+        <div class="col-lg-8"><span><strong>Description</strong></span>Share Elan card program mechanics, products, servicing, and overall benefits for the enterprise and members</div>
+        <div class="col-lg-1"><span><strong>Date</strong></span>TBD</div>
+      </div>
+      <div class="summary-table">
+        <div class="col-lg-2"><strong><span>Steps</span>Qualitative Review</strong></div>
+        <div class="col-lg-1"><strong><span>Timing</span>Week 4</strong></div>
+        <div class="col-lg-8"><span><strong>Description</strong></span>Share financial valuation and go forward proformas within an Elan card program</div>
+        <div class="col-lg-1"><span><strong>Date</strong></span>TBD</div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- Muse Javascript Plugins -->
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+checkRTL();
+
+function checkRTL() {
+  if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+    addRTL();
+  }
+}
+
+//Muse RTL Mode Javascript
+document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+  muzeSidebarSwitcher.addEventListener('click', (e) => {
+  let htmlEle = document.querySelector('html');
+  let bodyEle =  document.querySelector('body');
+  if(htmlEle.getAttribute('dir') == 'rtl') {
+  htmlEle.removeAttribute('dir');
+  bodyEle.classList.remove('muse-rtl');
+  localStorage.setItem('hasRtl','')
+  let linkedCss = document.getElementById('hasRtl');
+  linkedCss.remove();
+  document.getElementById("flexSwitchCheckDefault").checked = false;
+  } else {
+  addRTL();
+  }
+  });
+});
+
+function addRTL() {
+document.querySelector('html').setAttribute('dir','rtl');
+document.querySelector('body').classList.toggle('muse-rtl');
+localStorage.setItem('hasRtl','muse-rtl');
+var rtlCss = document.createElement('link');
+rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+rtlCss.rel='stylesheet';
+rtlCss.type='text/css';
+rtlCss.media='all';
+rtlCss.id='hasRtl';
+document.getElementsByTagName('head')[0].prepend(rtlCss);
+document.getElementById("flexSwitchCheckDefault").checked = true;
+}
+
+  //Muse AOS Animation Javascript
+  AOS.init ({
+    offset: 0,
+    once: true,
+    easing: 'ease-out'
+  });
+  
+  //Muse Typed JavaScript
+  var typed = new Typed("#muse-type", {
+    stringsElement: '#type-captions',
+    typeSpeed: 150,
+    backSpeed: 50,
+    backDelay: 1500,
+    startDelay: 1000,
+    loop: true,
+  });
+
+  //Muse Swipper JavaScript
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    }
+  });
+
+  //Muse Switch Toggle JavaScript
+  var elem = document.getElementById("switch-content");
+  function toggleClass(){
+    elem.classList.toggle("switch-hide");
+  }
+</script>
+</body>
+</html>
