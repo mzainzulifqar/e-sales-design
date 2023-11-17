@@ -17,8 +17,8 @@
 </head>
 <body class="maindemo-template">
 
-<!-- three-col-section snppet-25-->
-<section class="muse-section snppet-two-col-section d-flex align-items-center client-resource-center comprehensive-annual-marketing-strategy">
+<!-- three-col-section snippet-25-->
+<section class="muse-section snippet-two-col-section d-flex align-items-center client-resource-center comprehensive-annual-marketing-strategy">
     <div class="container-fluid max-90">
       <div class="row justify-content-between">
         <div class="col-12 col-lg-6">
@@ -34,11 +34,9 @@
         </div>
       </div>
         
-        <div class="row  card-management align-items-center">
-            
+        <div class="row card-management align-items-center">
           <div class="col-12 col-xl-6 order-xl-0 order-2">
                 <div class="row">
-                    
                     <div class="col-12 col-md-6 col-xl-6 border-right-gray border-right-hide">
                       <div class="content"> 
                         <div class="list-content">
@@ -63,8 +61,8 @@
                         </div>
 
                         <div class="list-content">
-                          <h4 class="text-blue-600 ">Impressive Growth</h4>
-                          <ul class="text-black  m-0">
+                          <h4 class="text-blue-600">Impressive Growth</h4>
+                          <ul class="text-black m-0">
                               <li class="">Participating financial institutions
                                 leverage Elan's marketing strategy to
                                 average a 50% lift in new account
@@ -116,15 +114,15 @@
           <div class="col-12 col-xl-6 d-flex align-items-center pb-xl-0 pb-3 mb-3 mb-xl-0 order-xl-0 order-1">
             <div class="image text-center mx-auto"> 
             <img class="" src="../../assets/img/templates/comprehensive.png" alt="Comprehensive">
-            <!-- <img class="" src="https://mojomosiac.s3.us-east-2.amazonaws.com/images-3/1698883349106759392-media.png" alt="Elan laptop"> -->
-            
         </div>
     </div>
         </div>
       </div>
   </div>
 </section>
-
+<div class="confidential">
+    <small class="small-txt">Elan Credit Card | Confidential</small>
+</div>
 
 <!-- Muse Javascript Plugins -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -218,17 +216,17 @@ jQuery(document).ready(function($) {
             var counterTitle = 0;
 
             // Loop through the elements and find the maximum height
-            $(".snppet-two-col-section .content .list-content ul li").each(function() {
+            $(".snippet-two-col-section .content .list-content ul li").each(function() {
                 if ($(this).height() > counterTitle) {
                     counterTitle = $(this).height();
                 }
             });
 
             // Set the height of all elements to the maximum height
-            $(".snppet-two-col-section .content .list-content ul li").height(counterTitle);
+            $(".snippet-two-col-section .content .list-content ul li").height(counterTitle);
         } else {
             // If the screen width is less than 768px, reset the height to auto
-            $(".snppet-two-col-section .content .list-content ul li").height('auto');
+            $(".snippet-two-col-section .content .list-content ul li").height('auto');
         }
     }
 

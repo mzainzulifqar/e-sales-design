@@ -2652,23 +2652,11 @@ textarea.form-control {
 @import 'templates';
 @import 'dashboard';
 
-
-
-body{
-  &.marketing-overview-template{
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100vw;
-      overflow: hidden;
-  }
-}
-
 .marketing-overview-section{
   position: relative;
   height: 80vh;
   @include media-breakpoint-down(lg) {
-    height: calc(80vh - -120px);
+    height: 100%;
   }
   &.small-height{
     min-height: 60vh;
@@ -2821,7 +2809,7 @@ body{
 
 //Disclosure-section
 .Disclosure-section{
-  height: 100vh;
+  height: 100%;
   position: relative;
   .content{
     p{
@@ -2841,11 +2829,7 @@ body{
     padding: 40px 0;
   }
   .two-col-box-container{
-    height: calc(80vh - -120px);
     justify-content: center;
-    @include media-breakpoint-down(lg) { 
-      height: auto;
-    }
   }
   .b-right{
     border-right: 2px solid #001C6E;
@@ -2892,15 +2876,10 @@ body{
   }
 }
 
-// 15-snppet-three-col-section-image
-.snppet-three-col-section{
+// 15-snippet-three-col-section-image
+.snippet-three-col-section{
     position: relative;
     padding: 5vh 0;
-    @include media-breakpoint-up(xl) {
-      height: 100vh;
-      overflow: hidden;
-    }
-
     .black-box-content{
       @include media-breakpoint-up(lg) { 
         max-width: 900px;
@@ -2969,15 +2948,10 @@ body{
 }
 
 
-// 29snppet-two-col-section 
-.snppet-two-col-section{
+// 29 snippet-two-col-section 
+.snippet-two-col-section{
     position: relative;
     padding: 5vh 0;
-    @include media-breakpoint-up(xl) {
-      height: 100vh;
-      overflow: hidden;
-    }
-    
     .black-box-content{
       @include media-breakpoint-up(lg) { 
         max-width: 900px;
@@ -3034,16 +3008,10 @@ body{
   }
 }
 
-// 21 snppet-image-content-col-section
-.snppet-image-content-col-section{
+// 21 snippet-image-content-col-section
+.snippet-image-content-col-section{
   position: relative;
   padding: 5vh 0;
-  
-  @include media-breakpoint-up(lg) {
-    height: 100vh;
-    overflow: hidden;
-  }
-
   h4{
     &.heading-title{
       line-height: 1.4;
@@ -3290,5 +3258,25 @@ body{
     @include media-breakpoint-down(lg) { 
       border: none;
     }
+  }
+}
+.confidential{
+  position: relative;
+  min-height: 60px;
+  .small-txt{
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    @include media-breakpoint-down(md) { 
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+.border-right-hide-xl{
+  @include media-breakpoint-down(xl){
+    border: none; 
   }
 }

@@ -2,10 +2,6 @@
   padding: 5vh 0;
 }
 .financial-table-section{
-  @include media-breakpoint-up(lg){
-    height: 100vh;
-    overflow: hidden;
-  }
   .financial-table{
     margin-top: 30px;
     @media (min-height: 500px){

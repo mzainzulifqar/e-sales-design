@@ -27,11 +27,6 @@ $grey-bg: #b3b3b3;
 
 .partner-adv-section{
   padding: 5vh 0;
-  @include media-breakpoint-up(lg){
-    height: 100vh;
-    overflow: hidden;
-  }
-  
   h4 {
     line-height: 1.4;
     @include media-breakpoint-up(lg){
