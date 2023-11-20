@@ -22221,3 +22221,143 @@ header .nav-link:hover {
 .product-overview-section .product-overview-table .prouct-overview-redemptions-cell p {
   text-align: center;
 }
+
+.pink-bg {
+  background: #F47C64;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.journey-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.journey-box p {
+  font-size: 20px;
+}
+
+.journey-box h1, .journey-box .h1 {
+  color: #F47C64;
+  font-size: 26px;
+}
+
+.journey-box .your-name-box {
+  display: inline-block;
+  background: #F47C64;
+  min-width: 300px;
+  max-width: 630px;
+  border-radius: 20px;
+  padding: 15px 10px 20px;
+  margin-top: 20px;
+}
+
+.journey-box .your-name-box h2, .journey-box .your-name-box .h2 {
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+.journey-box .your-name-box p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.journey-box .your-name-box form input {
+  width: 100%;
+  border: 0;
+  font-size: 60px;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  min-width: 100%;
+  max-width: 600px;
+}
+
+.pink-bg {
+  background: #F47C64;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.cell-number-box p {
+  margin: 20px 0 0 0;
+  color: #898989;
+  font-size: 18px;
+  line-height: 1.4;
+  display: block;
+  font-weight: 500;
+}
+
+.cell-number-box figure {
+  margin-bottom: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #333333b3;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-top: 20px;
+}
+
+.cell-number-box figure img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.cell-number-box figure figcaption strong {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #333;
+  margin-top: 5px;
+  display: block;
+}
+
+.cell-number-box figure figcaption span {
+  color: #898989;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.cell-number-box figure figcaption span input {
+  border: 0;
+  color: #0087cc;
+  margin-left: 10px;
+  padding: 5px;
+  width: 140px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cell-number-box figure figcaption span input::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #ddd;
+}
+
+.cell-number-box figure figcaption span input::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+.cell-number-box figure figcaption span input::-moz-placeholder {
+  color: #ddd;
+}
+
+.cell-number-box figure figcaption span input:-ms-input-placeholder {
+  color: #ddd;
+}
+
+.cell-number-box figure figcaption span input::placeholder {
+  color: #ddd;
+}
