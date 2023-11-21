@@ -18,20 +18,20 @@
 <!-- Muse Theme CSS -->
 <link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
 </head>
-<body class="maindemo-template snippet-for">
+<body>
 
 <!-- Muse Section snippet-2-blank-->
-<section class="journey-overview-section pink-bg min-vh-100">
-    <div class="container d-flex align-items-center h-100 justify-content-center">
+<section class="journey-section">
+    <div class="container d-flex align-items-center justify-content-center">
         <div class="journey-box text-center w-100">
-            <h1>What's your cell number?</h1>
+            <h3 class="text-primary">What's your cell number?</h3>
             <div class="cell-number-box">
                <figure>
                   <img src="../../assets/img/pages/avatar32.png" alt="">
                   <figcaption>
                       <strong>RYAN</strong>
                         <span class="d-flex align-items-center justify-content-center">mobile 
-                          <form><input type="tel" id="phone" class="" placeholder="Add Number..." pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required></form>
+                          <form><input type="tel" id="phone" class="text-primary" placeholder="Add Number..." pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required></form>
                         </span>
                   </figcaption>
                 </figure>
@@ -57,9 +57,6 @@
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
     e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
   });
-
-
-
 
 
 

@@ -22222,12 +22222,24 @@ header .nav-link:hover {
   text-align: center;
 }
 
-.pink-bg {
-  background: #F47C64;
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.pink-text {
+  color: #F47C64;
+}
+
+.journey-section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .journey-box {
@@ -22236,11 +22248,18 @@ header .nav-link:hover {
   border-radius: 10px;
 }
 
-.journey-box p {
-  font-size: 20px;
+@media (max-width: 767.98px) {
+  .journey-box {
+    padding: 30px;
+  }
 }
 
-.journey-box h1, .journey-box .h1 {
+.journey-box .max-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.journey-box h3, .journey-box .h3 {
   color: #F47C64;
   font-size: 26px;
 }
@@ -22263,13 +22282,12 @@ header .nav-link:hover {
 
 .journey-box .your-name-box p {
   color: #fff;
-  font-size: 16px;
   margin: 0 0 5px 0;
 }
 
 .journey-box .your-name-box form input {
   width: 100%;
-  border: 0;
+  border: none;
   font-size: 60px;
   padding: 5px 10px;
   text-align: center;
@@ -22280,21 +22298,9 @@ header .nav-link:hover {
   max-width: 600px;
 }
 
-.pink-bg {
-  background: #F47C64;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
 .cell-number-box p {
   margin: 20px 0 0 0;
   color: #898989;
-  font-size: 18px;
-  line-height: 1.4;
-  display: block;
-  font-weight: 500;
 }
 
 .cell-number-box figure {
@@ -22302,7 +22308,7 @@ header .nav-link:hover {
   display: inline-block;
   width: 100%;
   max-width: 300px;
-  border: 2px solid #333333b3;
+  border: 2px solid #333;
   border-radius: 15px;
   padding: 30px 20px;
   margin-top: 20px;
@@ -22317,9 +22323,7 @@ header .nav-link:hover {
 .cell-number-box figure figcaption strong {
   text-transform: uppercase;
   font-size: 20px;
-  color: #333;
   margin-top: 5px;
-  display: block;
 }
 
 .cell-number-box figure figcaption span {
@@ -22332,7 +22336,6 @@ header .nav-link:hover {
 
 .cell-number-box figure figcaption span input {
   border: 0;
-  color: #0087cc;
   margin-left: 10px;
   padding: 5px;
   width: 140px;
@@ -22359,5 +22362,71 @@ header .nav-link:hover {
 }
 
 .cell-number-box figure figcaption span input::placeholder {
+  color: #ddd;
+}
+
+.motivation-level .slider-thumb .slick-track {
+  -webkit-transform: unset !important;
+          transform: unset !important;
+}
+
+.motivation-level .slider-thumb .slick-slide {
+  padding: 15px 25px;
+  background-color: rgba(244, 124, 100, 0.3);
+  margin: 0 3px;
+}
+
+.motivation-level .slider-thumb .slick-slide.slick-current {
+  background-color: #F47C64;
+}
+
+.motivation-level .slider-thumb .slick-slide h3, .motivation-level .slider-thumb .slick-slide .h3 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+.motivation-level .motivation-content {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.motivation-level .motivation-content .text-right {
+  text-align: right;
+}
+
+.motivation-level .motivation-content .text-left {
+  text-align: left;
+}
+
+.user-request {
+  margin: 15px 0;
+}
+
+.user-request input {
+  text-align: center;
+  font-style: italic;
+}
+
+.user-request input::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #ddd;
+}
+
+.user-request input::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+.user-request input::-moz-placeholder {
+  color: #ddd;
+}
+
+.user-request input:-ms-input-placeholder {
+  color: #ddd;
+}
+
+.user-request input::placeholder {
   color: #ddd;
 }

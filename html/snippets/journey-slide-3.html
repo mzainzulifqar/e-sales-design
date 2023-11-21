@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Studio - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- slider  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<!-- Muse Section snippet-2-blank-->
+<section class="journey-section">
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="journey-box text-center w-100">
+            <h3 class="text-primary">Why are you here, Ryan?</h3>
+            <p>Seems like a silly question, right?</p>
+            <div class="motivation-level">
+              <div class="slider slider-thumb">
+                <div><h3>It's required.</h3></div>
+                <div><h3>I want to Improve.</h3></div>
+                <div><h3>I love learning.</h3></div>
+              </div>
+              
+              <div class="slider slider-content">
+                <div>
+                  <div class="motivation-content">
+                    <div class="col-5 text-right">So let's support you to get a return on the time you're investing.</div>
+                    <div class="col-2"></div>
+                    <div class="col-5 text-left">Understanding the reason you're here can help you choose to spend time here.</div>
+                  </div>
+                </div>
+                <div><h3>2</h3></div>
+                <div><h3>3</h3></div>
+              </div>
+              <input id="myRange" type="range" min="0" max="2" value="0" />
+            </div>            
+        </div>
+    </div>
+</section>
+
+
+<!-- Muse Javascript Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+
+  $('.slider-content').slick({
+    slidesToShow: 1,
+    arrows: false,
+    speed: 300,
+    slidesToScroll: 1,
+    fade: true,
+    infinite: false,
+    draggable: false,
+    accessibility: true,
+
+    centerMode: true,
+    asNavFor: '.slider-thumb',
+      arrows: false
+  });
+  $('.slider-thumb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    
+    asNavFor: '.slider-content',
+    dots: false,
+    centerMode: false,
+    
+    focusOnSelect: true
+  });
+
+  var slider = $('.slider-content');  
+    $('input[type="range"]').on('input', function(){
+      var position = document.getElementById("myRange").value;
+     slider.slick('slickGoTo', position)
+     console.log(position)
+    }); 
+
+
+
+  checkRTL();
+  
+  function checkRTL() {
+    if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+      addRTL();
+    }
+  }
+  
+  //Muse RTL Mode Javascript
+  document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+    muzeSidebarSwitcher.addEventListener('click', (e) => {
+    let htmlEle = document.querySelector('html');
+    let bodyEle =  document.querySelector('body');
+    if(htmlEle.getAttribute('dir') == 'rtl') {
+    htmlEle.removeAttribute('dir');
+    bodyEle.classList.remove('muse-rtl');
+    localStorage.setItem('hasRtl','')
+    let linkedCss = document.getElementById('hasRtl');
+    linkedCss.remove();
+    document.getElementById("flexSwitchCheckDefault").checked = false;
+    } else {
+    addRTL();
+    }
+    });
+  });
+  
+  function addRTL() {
+  document.querySelector('html').setAttribute('dir','rtl');
+  document.querySelector('body').classList.toggle('muse-rtl');
+  localStorage.setItem('hasRtl','muse-rtl');
+  var rtlCss = document.createElement('link');
+  rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+  rtlCss.rel='stylesheet';
+  rtlCss.type='text/css';
+  rtlCss.media='all';
+  rtlCss.id='hasRtl';
+  document.getElementsByTagName('head')[0].prepend(rtlCss);
+  document.getElementById("flexSwitchCheckDefault").checked = true;
+  }
+  
+    //Muse AOS Animation Javascript
+    AOS.init ({
+      offset: 0,
+      once: true,
+      easing: 'ease-out'
+    });
+    
+  
+  
+    //Muse Swipper JavaScript
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 20,
+        },
+      }
+    });
+  
+    //Muse Switch Toggle JavaScript
+    var elem = document.getElementById("switch-content");
+    function toggleClass(){
+      elem.classList.toggle("switch-hide");
+    }
+  
+  $(document).ready(function(){
+        $('.center-slider').slick({
+          slidesToShow: 8,
+          slidesToScroll: 1,
+          centerMode: true,
+          arrows: false,
+          dots: false,
+          speed: 300,
+          centerPadding: '20px',
+          infinite: true,
+          autoplaySpeed: 1000,
+          autoplay: true,
+          responsive: [
+            {
+              breakpoint: 9999,
+              settings: "unslick"
+            },
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 4,
+              }
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 650,
+              settings: {
+                slidesToShow: 2,
+              }
+            }
+          ]
+        });
+  });
+  </script>
+</body>
+</html>

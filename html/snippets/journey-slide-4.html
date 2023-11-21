@@ -18,15 +18,33 @@
 <!-- Muse Theme CSS -->
 <link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
 </head>
-<body class="maindemo-template snippet-for">
+<body>
 
 <!-- Muse Section snippet-2-blank-->
-<section class="marketing-overview-section">
-    <div class="container d-flex align-items-center h-100 justify-content-center">
-        <div class="col-9 d-lg-block d-none shape" >maishank    </div>
+<section class="journey-section">
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="journey-box text-center w-100">
+          <div class="max-content">
+            <h3 class="text-dark">Is there something in your life that you want to be better?</h3>
+            <p class="pink-text">Whatever popped into your head, have this process be about that.</p>
+            <form>
+              <div class="user-request">
+                <input class="form-control" type="text" placeholder="Think about your personal life.">
+              </div>
+              <div class="user-request">
+                <input class="form-control" type="text" placeholder="Think about your friends or family.">
+              </div>
+              <div class="user-request">
+                <input class="form-control" type="text" placeholder="Think about your work life.">
+              </div>
+            </form>
+          </div>
+            
+        </div>
     </div>
 </section>
-  
+
+
 <!-- Muse Javascript Plugins -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -35,6 +53,39 @@
 <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="../../assets/vendor/aos/dist/aos.js"></script>
 <script>
+
+  $('.slider-content').slick({
+    slidesToShow: 1,
+    arrows: false,
+    speed: 300,
+    slidesToScroll: 1,
+    fade: false,
+    infinite: false,
+    draggable: false,
+    accessibility: true,
+
+    centerMode: true,
+    asNavFor: '.slider-thumb',
+      arrows: false
+  });
+  $('.slider-thumb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-content',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+  var slider = $('.slider-content');  
+    $('input[type="range"]').on('input', function(){
+      var position = document.getElementById("myRange").value;
+     slider.slick('slickGoTo', position)
+     console.log(position)
+    }); 
+
+
+
   checkRTL();
   
   function checkRTL() {
