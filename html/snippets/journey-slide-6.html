@@ -24,39 +24,51 @@
 <section class="journey-section">
     <div class="container d-flex align-items-center justify-content-center">
         <div class="journey-box text-center w-100">
-            <h3 class="text-primary">What's your cell number?</h3>
-            <div class="cell-number-box">
-               <figure>
-                  <img src="../../assets/img/pages/avatar32.png" alt="">
-                  <figcaption>
-                      <strong>RYAN</strong>
-                        <span class="d-flex align-items-center justify-content-center">mobile 
-                          <form><input type="tel" id="phone" class="text-primary" placeholder="Add Number..." pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required></form>
-                        </span>
-                  </figcaption>
-                </figure>
-
-                <p>We promise we won't spam you, nor will we sell you details to those people who've <br> been trying to reach you about your cars extended warranty.</p>
+          <div class="max-content">
+            <h3 class="orange-text">In case you get off track, how can we help you back on it?</h3>
+            <div class="row justify-content-center">
+              <div class="col-md-5 col-6">
+                <div class="off-track active">
+                  <h5>Hilarious meme</h5>
+                </div>
+              </div>
+              <div class="col-md-5 col-6">
+                <div class="off-track">
+                  <h5>Motivational quote</h5>
+                </div>
+              </div>
             </div>
+            <p class="off-track-txt">
+              You got it, Ryan! We'll text you a <strong>Hilarious Meme</strong> each day you're missing from your journey.
+            </p>
+          </div>
         </div>
     </div>
 </section>
 
 
+
 <!-- Muse Javascript Plugins -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
 <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="../../assets/vendor/aos/dist/aos.js"></script>
 <script>
 
-  //Phone Number Format
-  document.getElementById('phone').addEventListener('input', function (e) {
-    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-  });
+
+
+jQuery(".off-track").click(function(){
+  var Textcircle = $(this).text();
+  if($(this).hasClass("active")) {
+    }else{
+      $(".off-track").removeClass("active");
+      $(this).addClass("active");
+    }
+    jQuery(".off-track-txt strong").text(Textcircle);
+})
 
 
 
@@ -107,14 +119,8 @@
       easing: 'ease-out'
     });
     
-  
-  
-    //Muse Switch Toggle JavaScript
-    var elem = document.getElementById("switch-content");
-    function toggleClass(){
-      elem.classList.toggle("switch-hide");
-    }
-  
+
+
   </script>
 </body>
 </html>

@@ -24,41 +24,30 @@
 <section class="journey-section">
     <div class="container d-flex align-items-center justify-content-center">
         <div class="journey-box text-center w-100">
-            <h3 class="text-primary">What's your cell number?</h3>
-            <div class="cell-number-box">
-               <figure>
-                  <img src="../../assets/img/pages/avatar32.png" alt="">
-                  <figcaption>
-                      <strong>RYAN</strong>
-                        <span class="d-flex align-items-center justify-content-center">mobile 
-                          <form><input type="tel" id="phone" class="text-primary" placeholder="Add Number..." pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required></form>
-                        </span>
-                  </figcaption>
-                </figure>
-
-                <p>We promise we won't spam you, nor will we sell you details to those people who've <br> been trying to reach you about your cars extended warranty.</p>
+          <h3 class="text-success">How much time would you like to dedicate to your learning journey each day?</h3>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div id="chartContainer" style="height: 370px; width: 100%;"></div>
             </div>
+            <div class="col-md-6">
+              <h5>Ryan, committing 20-30 minutes each day to your journey means you’ll be that much closer to creating practices that your future self will thank you for.</h5>
+            </div>
+          </div>
         </div>
     </div>
 </section>
 
 
+
 <!-- Muse Javascript Plugins -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
 <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="../../assets/vendor/aos/dist/aos.js"></script>
 <script>
-
-  //Phone Number Format
-  document.getElementById('phone').addEventListener('input', function (e) {
-    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-  });
-
-
 
   checkRTL();
   
@@ -107,14 +96,105 @@
       easing: 'ease-out'
     });
     
-  
-  
-    //Muse Switch Toggle JavaScript
-    var elem = document.getElementById("switch-content");
-    function toggleClass(){
-      elem.classList.toggle("switch-hide");
+// Chart
+
+    window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {       
+  animationEnabled: true,
+  title: {
+    text: ""
+  },
+  axisX:{
+    minimum: 5,
+    maximum: 95
+  },
+  data: [{
+    type: "column",
+    dataPoints: [
+      { x: 10, y: 5 },
+      { x: 20, y: 50 },
+      { x: 30, y: 70 }
+    ]
+  }]
+});
+chart.render();
+
+var xSnapDistance = chart.axisX[0].convertPixelToValue(chart.get("dataPointWidth")) / 2;
+var ySnapDistance = 3;
+
+var xValue, yValue;
+
+var mouseDown = false;
+var selected = null;
+var changeCursor = false;
+
+var timerId = null;
+
+function getPosition(e) {
+  var parentOffset = $("#chartContainer > .canvasjs-chart-container").offset();           
+  var relX = e.pageX - parentOffset.left;
+  var relY = e.pageY - parentOffset.top;
+  xValue = Math.round(chart.axisX[0].convertPixelToValue(relX));
+  yValue = Math.round(chart.axisY[0].convertPixelToValue(relY));
+}
+
+function searchDataPoint() {
+  var dps = chart.data[0].dataPoints;
+  for(var i = 0; i < dps.length; i++ ) {
+    if( (xValue >= dps[i].x - xSnapDistance && xValue <= dps[i].x + xSnapDistance) && (yValue >= dps[i].y - ySnapDistance && yValue <= dps[i].y + ySnapDistance) ) 
+    {
+      if(mouseDown) {
+        selected = i;
+        break;
+      } else {
+        changeCursor = true;
+        break; 
+      }
+    } else {
+      selected = null;
+      changeCursor = false;
     }
-  
+  }
+}
+
+jQuery("#chartContainer > .canvasjs-chart-container").on({
+  mousedown: function(e) {
+    mouseDown = true;
+    getPosition(e);  
+    searchDataPoint();
+  },
+  mousemove: function(e) {
+    getPosition(e);
+    if(mouseDown) {
+      clearTimeout(timerId);
+      timerId = setTimeout(function(){
+        if(selected != null) {
+          chart.data[0].dataPoints[selected].y = yValue;
+          chart.render();
+        }   
+      }, 0);
+    }
+    else {
+      searchDataPoint();
+      if(changeCursor) {
+        chart.data[0].set("cursor", "n-resize");
+      } else {
+        chart.data[0].set("cursor", "default");
+      }
+    }
+  },
+  mouseup: function(e) {
+    if(selected != null) {
+      chart.data[0].dataPoints[selected].y = yValue;
+      chart.render();
+      mouseDown = false;
+    }
+  }
+});
+
+}
+
   </script>
 </body>
 </html>

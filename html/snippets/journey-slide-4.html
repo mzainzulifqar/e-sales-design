@@ -26,7 +26,7 @@
         <div class="journey-box text-center w-100">
           <div class="max-content">
             <h3 class="text-dark">Is there something in your life that you want to be better?</h3>
-            <p class="pink-text">Whatever popped into your head, have this process be about that.</p>
+            <p class="pink-text"><strong>Whatever popped into your head, have this process be about that.</strong></p>
             <form>
               <div class="user-request">
                 <input class="form-control" type="text" placeholder="Think about your personal life.">
@@ -43,6 +43,11 @@
         </div>
     </div>
 </section>
+<div class="container text-right">
+  <div class="life-journey">
+    <span>?</span>Need some ideas?
+  </div>
+</div>
 
 
 <!-- Muse Javascript Plugins -->
@@ -53,38 +58,6 @@
 <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="../../assets/vendor/aos/dist/aos.js"></script>
 <script>
-
-  $('.slider-content').slick({
-    slidesToShow: 1,
-    arrows: false,
-    speed: 300,
-    slidesToScroll: 1,
-    fade: false,
-    infinite: false,
-    draggable: false,
-    accessibility: true,
-
-    centerMode: true,
-    asNavFor: '.slider-thumb',
-      arrows: false
-  });
-  $('.slider-thumb').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-content',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true
-  });
-
-  var slider = $('.slider-content');  
-    $('input[type="range"]').on('input', function(){
-      var position = document.getElementById("myRange").value;
-     slider.slick('slickGoTo', position)
-     console.log(position)
-    }); 
-
-
 
   checkRTL();
   
@@ -134,75 +107,6 @@
     });
     
   
-  
-    //Muse Swipper JavaScript
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 6,
-      spaceBetween: 20,
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 6,
-          spaceBetween: 20,
-        },
-      }
-    });
-  
-    //Muse Switch Toggle JavaScript
-    var elem = document.getElementById("switch-content");
-    function toggleClass(){
-      elem.classList.toggle("switch-hide");
-    }
-  
-  $(document).ready(function(){
-        $('.center-slider').slick({
-          slidesToShow: 8,
-          slidesToScroll: 1,
-          centerMode: true,
-          arrows: false,
-          dots: false,
-          speed: 300,
-          centerPadding: '20px',
-          infinite: true,
-          autoplaySpeed: 1000,
-          autoplay: true,
-          responsive: [
-            {
-              breakpoint: 9999,
-              settings: "unslick"
-            },
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 4,
-              }
-            },
-            {
-              breakpoint: 769,
-              settings: {
-                slidesToShow: 3,
-              }
-            },
-            {
-              breakpoint: 650,
-              settings: {
-                slidesToShow: 2,
-              }
-            }
-          ]
-        });
-  });
   </script>
 </body>
 </html>
