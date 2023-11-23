@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Project We Roadmap Intro 1</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="maindemo-template ">
+
+
+<section class="muse-section education-template">
+    <div class="container-fluid max-90 h-100 d-flex align-items-center">
+        <div class="row pb-5">
+            <div class="col-12 d-block d-md-none">
+                <iframe class="video-iframe" src="https://player.vimeo.com/video/449787858?h=489706c111&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex flex-column justify-content-center h-100">
+                    <h3 class="text-white h4 pb-3" id="mce_0" spellcheck="false" data-gramm="false" wt-ignore-input="true" data-quillbot-element="bgi3O3NV5ptPBrJO3WoiS">Step 1: Increase Clarity</h3>
+                    <p class="big text-white lh-lg" id="mce_6" spellcheck="false" data-gramm="false" wt-ignore-input="true">Begin by pondering the following questions. At this stage, there is no right or wrong answer. These questions are just a starting point to get you engaged in the process.</p>
+                    <ul class="big mt-3 text-white lh-lg">
+                    <li>What do I care / get passionate about – what am I for?</li>
+                    <li>What difference do I want to make?  In the future, what difference do I want people to say I made?</li>
+                    <li>What are the lasting effects I desire of my efforts? And Why?</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-7 d-md-block d-none">
+                <iframe class="max-height" src="https://player.vimeo.com/video/885073314?h=489706c111&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+            
+        </div>
+    </div>
+    
+        <div class="has-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 143.649" class="">
+                <path id="Path_2" data-name="Path 2" d="M0,55.558S368.667-36.174,768.667,23.553s593.365,64.118,810,47.555S1920,7.579,1920,7.579V147H0Z" transform="translate(0 -3.351)" fill="var(--accent-color)" class=""></path>
+            </svg>
+        </div>
+    
+</section>
+
+
+<!-- Muse Javascript Plugins -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="../../assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/lodash/lodash.min.js"></script>
+<script src="../../assets/vendor/plyr/dist/plyr.polyfilled.min.js"></script>
+<script src="../../assets/vendor/choices-master/public/assets/scripts/choices.min.js"></script>
+<script src="../../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+<script src="../../assets/vendor/progressbar/dist/progressbar.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="../../assets/vendor/purecounterjs/dist/purecounter.js"></script>
+<script src="../../assets/js/theme-custom.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+
+        // START HERE
+        AOS.refresh();
+
+        AOS.init({
+            offset: 0,
+            once: true,
+            easing: 'ease-out'
+        });
+
+        //Muse Swipper JavaScript Require for clients
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 20,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                },
+            }
+        });
+
+        //Muse Swiper Product Listing Slider JavaScript
+        var swiper = new Swiper('.swiper-list2,.swiper-navication', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        //Muse Swiper Single Column Slider JavaScript
+        var swiper = new Swiper('.swiper-single,.swiper-list', {
+            spaceBetween: 25,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Rquire for pricing
+        //Muse Switch Toggle JavaScript
+        var elem = document.getElementById("switch-content");
+        function toggleClass3() {
+            elem.classList.toggle("switch-hide");
+        }
+
+        // END HERE
+        $(document).ready(function() {
+            $("a").each(function() {
+                $(this).removeAttr("type");
+            });
+        });
+        
+                $("a").each(function() {
+            $(this).removeAttr("type");
+        });
+    });
+
+    /* Open the sidenav */
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+    }
+
+    /* Close/hide the sidenav */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+</body>
+</html>

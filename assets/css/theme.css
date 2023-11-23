@@ -21416,6 +21416,58 @@ header .nav-link:hover {
   }
 }
 
+.education-template {
+  background-color: #8bd3db;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .education-template {
+    height: 100%;
+  }
+}
+
+.has-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.max-height {
+  height: calc(100vh - 120px);
+}
+
+.roadmap-img {
+  width: 30%;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .video-iframe {
+    height: 400px;
+  }
+}
+
+.list-space li {
+  margin-bottom: 10px;
+}
+
+.pw-accordion .accordion-header .accordion-button {
+  background-color: #ff745c;
+  color: #fff;
+  border: 0;
+  font-size: 15px;
+}
+
+.pw-accordion .accordion-collapse {
+  border: 1px solid #d1d1d1;
+}
+
 html, body {
   width: 100%;
   height: 100%;
