@@ -3326,6 +3326,16 @@ textarea.form-control {
     border: 1px solid #d1d1d1;
   }
 }
+.overflow-md-y{
+  @include media-breakpoint-up(md) {
+    overflow-y: auto;
+  }
+}
+.h-vh-100{
+  @include media-breakpoint-up(md) {
+    height: 100vh;
+  }
+}
 
 
 
@@ -3342,6 +3352,9 @@ html, body{
 }
 .orange-text{
   color: $orange;
+}
+.orange-bg{
+  background-color: $orange;
 }
 .pink-text{
   color: $pink-bg;

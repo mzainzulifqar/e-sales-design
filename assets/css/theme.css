@@ -21468,6 +21468,18 @@ header .nav-link:hover {
   border: 1px solid #d1d1d1;
 }
 
+@media (min-width: 768px) {
+  .overflow-md-y {
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .h-vh-100 {
+    height: 100vh;
+  }
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -21479,6 +21491,10 @@ html, body {
 
 .orange-text {
   color: #fbb11d;
+}
+
+.orange-bg {
+  background-color: #fbb11d;
 }
 
 .pink-text {
