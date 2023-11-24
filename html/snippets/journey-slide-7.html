@@ -25,37 +25,54 @@
     <div class="container d-flex align-items-center justify-content-center">
         <div class="journey-box text-center w-100">
           <h2 class="text-success">Choose three words that best describe what popped into your head - the reason you want to learn.</h2>
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-lg-6">
-              <input type="checkbox" id="1">
-              <label for="1">HEALTH</label>
-              <input type="checkbox" id="2">
-              <label for="2">FAMILY</label>
-              <input type="checkbox" id="3">
-              <label for="3">LEADERSHIP</label>
-              <input type="checkbox" id="4">
-              <label for="4">FINANCIAL</label>
-              <input type="checkbox" id="5">
-              <label for="5">WORK</label>
-              <input type="checkbox" id="6">
-              <label for="6">MOTIVATION</label>
-              <input type="checkbox" id="7">
-              <label for="7">PERSONAL</label>
-              <input type="checkbox" id="8">
-              <label for="8">FITNESS</label>
-              <input type="checkbox" id="9">
-              <label for="9">PROFESSIONAL</label>
-              <input type="checkbox" id="10">
-              <label for="10">IMPROVE</label>
-              <input type="checkbox" id="11">
-              <label for="11">TRANSITION</label>
-              <input type="checkbox" id="12">
-              <label for="12">RELATIONSHIPS</label>
+              <div class="select-reason-boxs d-flex flex-wrap">
+                <label for="1"> <input type="checkbox" id="1">
+                  HEALTH
+                </label>
+                <label for="2"> <input type="checkbox" id="2">
+                  FAMILY
+                </label>
+
+                <label for="3"><input type="checkbox" id="3">
+                LEADERSHIP</label>
+
+                <label for="4"><input type="checkbox" id="4">
+                FINANCIAL</label>
+
+                <label for="5"><input type="checkbox" id="5">
+                WORK</label>
+
+                <label for="6"><input type="checkbox" id="6">
+                MOTIVATION</label>
+
+                <label for="7"><input type="checkbox" id="7">
+                PERSONAL</label>
+
+                <label for="8"><input type="checkbox" id="8">
+                FITNESS</label>
+
+                <label for="9"><input type="checkbox" id="9">
+                PROFESSIONAL</label>
+
+                <label for="10"><input type="checkbox" id="10">
+                IMPROVE</label>
+
+                <label for="11"><input type="checkbox" id="11">
+                TRANSITION</label>
+
+                <label for="12"><input type="checkbox" id="12">
+                RELATIONSHIPS</label>
+              </div>
+              <div id="validation-message"></div>
             </div>
             <div class="col-lg-6">
-              <div class="reason"></div>
-              <div class="reason"></div>
-              <div class="reason"></div>
+              <div class="three-reasons text-start">
+                <label class="reason"></label>
+                <div class="reason"></div>
+                <div class="reason"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -74,6 +91,34 @@
 <script src="../../assets/vendor/aos/dist/aos.js"></script>
 <script>
 
+// Event listener for checkboxes
+jQuery(document).ready(function($) {
+  $('.select-reason-boxs input[type="checkbox"]').on('change', function() {
+  
+    var label = $('label[for="' + this.id + '"]');
+    label.toggleClass('active');
+    var labelText = label.text();
+    var reasonDiv = $('.reason:empty:first');
+    reasonDiv.toggleClass('active');
+
+    if (reasonDiv.length > 0) {
+      if ($(this).prop('checked')) {
+        reasonDiv.text(labelText);
+      } else {
+        reasonDiv.text('');
+      }
+    }
+    var selectedCount = $('.select-reason-boxs input[type="checkbox"]:checked').length;
+    if (selectedCount > 3) {
+      $('#validation-message').text('Please select up to 3 checkboxes.');
+      $(this).prop('checked', false);
+      label.removeClass('active');
+    } else {
+      $('#validation-message').text('');
+    }
+  });
+});
+
 
 
 jQuery(".off-track").click(function(){
@@ -85,8 +130,6 @@ jQuery(".off-track").click(function(){
     }
     jQuery(".off-track-txt strong").text(Textcircle);
 })
-
-
 
   checkRTL();
   

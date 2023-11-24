@@ -22589,3 +22589,55 @@ html, body {
 .product-overview-section .product-overview-table .prouct-overview-redemptions-cell p {
   text-align: center;
 }
+
+/* Slide 7 */
+.select-reason-boxs {
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+}
+
+.select-reason-boxs label {
+  display: inline-block;
+  background: #d1d1d1;
+  font-size: 12px;
+  padding: 10px;
+  font-weight: 700;
+  width: 23.333%;
+  color: #fff;
+}
+
+.select-reason-boxs label.active {
+  background: #00bb57;
+}
+
+.select-reason-boxs input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+#validation-message {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: red;
+  margin-top: 15px;
+}
+
+.three-reasons .reason {
+  display: inline-block;
+  background: #bfeed5;
+  font-size: 12px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  min-width: 130px;
+  min-height: 38px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.three-reasons .reason.active {
+  background: #00bb57;
+}
