@@ -3343,6 +3343,7 @@ textarea.form-control {
 
 $pink-bg: #F47C64;
 $orange: #fbb11d;
+$green: #00bb56;
 html, body{
   width: 100%;
   height: 100%;
@@ -3413,7 +3414,82 @@ html, body{
       }
   }
 }
+/* Slide 7 */
+.select-reason-boxs{
+    column-gap: 10px;
+    row-gap: 10px;
+    @include media-breakpoint-down(sm) {
+      column-gap: 5px;
+      row-gap: 5px;
+    }
+    label {
+      background: rgba($black, 0.2);
+      font-size: 12px;
+      padding: 10px;
+      font-weight: 700;
+      width: calc(25% - 10px);
+      color: $white;
+      @include media-breakpoint-down(md) {
+        width: calc(33.33% - 10px);
+      }
+      @include media-breakpoint-down(sm) {
+        width: calc(50% - 5px);
+      }
+      &.active{
+        background: $green;
+      }
+    }
+    input[type="checkbox"]{
+      position: absolute;
+      opacity: 0;
+    }
+}
+#validation-message {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: red;
+  margin-top: 15px;
+}
 
+.three-reasons{
+  display: flex;
+  flex-direction: column;
+  .reason{
+    background: rgba($green, 0.3);
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: $white;
+    font-weight: 700;
+    min-height: 38px;
+    &.active{
+      background: $green;
+    }
+  }
+}
+.reason-star{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 225px;
+  .svg-line{
+    position: absolute;
+    left: 0;
+  }
+  .svg-line1{
+    width: 86%;
+    top: 65px;
+  }
+  .svg-line2{
+    width: 95%;
+    top: 55px;
+  }
+  .svg-line3{
+    width: 83%;
+    top: 4px;
+  }
+}
 
 
 .cell-number-box{
