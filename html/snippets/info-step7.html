@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>Studio - Muse Documentation | Muse - Responsive Website Template</title>
+<meta charset="UTF-8">
+<meta name="description" content="Muse">
+<meta name="keywords" content="Muse">
+<meta name="author" content="Muse">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Muse Favicon -->
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- slider  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+<!-- Muse Plugins CSS -->
+<link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet" type="text/css" media="all">
+<!-- Muse Theme CSS -->
+<link href="../../assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+<!-- Muse Section info-step1-blank-->
+
+<div class="bg-gray-100">
+  <form action="#">
+    <div class="blocks-wrap">
+      <div class="block-holder">
+        <div class="block-container">
+          <section class="question-holder">
+            <h2 class="text-green">Choose three words that best describe the reason you’re on this journey:</h2>
+            <div class="check-selection-area">
+              <ul class="list-checkbox">
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">HEALTH</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">FAMILY</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">LEADERSHIP</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">FINANCIAL</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">WORK</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">MOTIVATION</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">PERSONAL</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">FITNESS</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">PROFESSIONAL</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">IMPROVE</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">TRANSITION</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span class="text">RELATIONSHIPS</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="selection-list">
+                <div class="selection-box">
+                  <div class="selection-val"></div>
+                  <div class="image-holder">
+                    <img src="../../assets/img/userinfo/line1.svg" alt="line">
+                  </div>
+                </div>
+                <div class="selection-box">
+                  <div class="selection-val"></div>
+                  <div class="image-holder">
+                    <img src="../../assets/img/userinfo/line3.svg" alt="line">
+                  </div>
+                </div>
+                <div class="selection-box">
+                  <div class="selection-val"></div>
+                  <div class="image-holder">
+                    <img src="../../assets/img/userinfo/line2.svg" alt="line">
+                  </div>
+                </div>
+                <div class="star-holder">
+                  <img src="../../assets/img/userinfo/star.svg" alt="image description">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Muse Javascript Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/typed.js/lib/typed.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/aos/dist/aos.js"></script>
+<script>
+
+  checkRTL();
+  
+  function checkRTL() {
+    if(localStorage.getItem('hasRtl') === 'muse-rtl') {
+      addRTL();
+    }
+  }
+  
+  //Muse RTL Mode Javascript
+  document.querySelectorAll('#RTLMode [type="checkbox"]').forEach(muzeSidebarSwitcher => {
+    muzeSidebarSwitcher.addEventListener('click', (e) => {
+    let htmlEle = document.querySelector('html');
+    let bodyEle =  document.querySelector('body');
+    if(htmlEle.getAttribute('dir') == 'rtl') {
+    htmlEle.removeAttribute('dir');
+    bodyEle.classList.remove('muse-rtl');
+    localStorage.setItem('hasRtl','')
+    let linkedCss = document.getElementById('hasRtl');
+    linkedCss.remove();
+    document.getElementById("flexSwitchCheckDefault").checked = false;
+    } else {
+    addRTL();
+    }
+    });
+  });
+  
+  function addRTL() {
+  document.querySelector('html').setAttribute('dir','rtl');
+  document.querySelector('body').classList.toggle('muse-rtl');
+  localStorage.setItem('hasRtl','muse-rtl');
+  var rtlCss = document.createElement('link');
+  rtlCss.href='../../assets/vendor/bootstrap/dist/css/bootstrap.rtl.min.css';
+  rtlCss.rel='stylesheet';
+  rtlCss.type='text/css';
+  rtlCss.media='all';
+  rtlCss.id='hasRtl';
+  document.getElementsByTagName('head')[0].prepend(rtlCss);
+  document.getElementById("flexSwitchCheckDefault").checked = true;
+  }
+  
+    //Muse AOS Animation Javascript
+    AOS.init ({
+      offset: 0,
+      once: true,
+      easing: 'ease-out'
+    });
+    
+  
+  </script>
+
+  
+
+  <script>
+    $(document).ready(function(){
+      jQuery('.list-checkbox input[type="checkbox"]').on('change', function(){
+        var _selfParent = jQuery(this).parents('.list-checkbox');
+        var getLength = _selfParent.find('input[type="checkbox"]:checked').length;
+        var getContent = jQuery(this).parent('.checkbox-label').find('.text').text();
+
+        jQuery('.list-checkbox input[type="checkbox"]').parents('li').removeClass('disabled');
+
+        // checking if the checkbox is going to be uncheck so that we can remove the selcted value
+
+        if(!(jQuery(this).prop('checked')==true)) {
+          var currVal = jQuery(this).parent('.checkbox-label').find('.text').html();
+
+          jQuery('.selection-box').each(function(){
+            var getSlectedValtext = jQuery(this).find('.selection-val').html();
+
+            if(getSlectedValtext == currVal) {
+              jQuery(this).find('.selection-val').html('');
+              jQuery(this).removeClass('value-added');
+              return false;
+            }
+          });
+        }
+
+        // Adding value in checkbox and over the selection list
+        else {
+          jQuery('.selection-box').each(function(){
+            var getSlectedValtext = jQuery(this).find('.selection-val').html();
+            if(getSlectedValtext == '') {
+              jQuery(this).find('.selection-val').html(getContent);
+              jQuery(this).addClass('value-added');
+              return false;
+            }
+          });
+        }
+
+        // disabling all the rest of the items if three checkboxes are selected
+        if(getLength >= 3) {
+          _selfParent.find('input[type="checkbox"]').each(function(){
+            if(!(jQuery(this).prop('checked')==true)){
+              jQuery(this).parents('li').addClass('disabled');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
