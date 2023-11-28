@@ -21566,6 +21566,144 @@ html, body {
   max-width: 600px;
 }
 
+.journal-ui .journal-tabs {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .journal-ui .journal-tabs {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+
+.journal-ui .tab-list {
+  width: 30%;
+  overflow-y: auto;
+  max-height: 570px;
+}
+
+@media (max-width: 767.98px) {
+  .journal-ui .tab-list {
+    width: 100%;
+  }
+}
+
+.journal-ui .nav-tabs {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  border: none;
+}
+
+.journal-ui .nav-tabs .nav-item {
+  margin-bottom: 8px;
+}
+
+.journal-ui .nav-tabs .nav-link {
+  text-align: left;
+  background-color: rgba(244, 124, 100, 0.4);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.journal-ui .nav-tabs .nav-link.active {
+  background-color: #F47C64;
+}
+
+.journal-ui .tab-content {
+  width: 70%;
+  margin: 0 10px;
+  padding: 50px 30px;
+  background-color: #F47C64;
+  height: 570px;
+}
+
+@media (max-width: 767.98px) {
+  .journal-ui .tab-content {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.journal-ui .tab-content h4, .journal-ui .tab-content .h4 {
+  color: #fff;
+}
+
+.journal-ui .tab-content .answer {
+  border-radius: 10px 10px 0 0;
+  background-color: #fff;
+  padding: 20px 30px;
+}
+
+.journal-ui .tab-content .answer textarea {
+  width: 100%;
+  height: 270px;
+  overflow-y: auto;
+  border: none;
+}
+
+.journal-ui .tab-content .navigator {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 15px;
+  background-color: #ddd;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+.journal-ui .tab-content .navigator .btnNext, .journal-ui .tab-content .navigator .btnPrevious {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  background-color: #084bb7;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.journal-ui .tab-content .navigator .btnNext:before, .journal-ui .tab-content .navigator .btnPrevious:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.journal-ui .tab-content .navigator .btnPrevious:before {
+  border-right: 15px solid #ddd;
+}
+
+.journal-ui .tab-content .navigator .btnNext:before {
+  border-left: 15px solid #ddd;
+}
+
+.journal-ui .tab-content .tab-pane:first-child .navigator .btnPrevious {
+  pointer-events: none;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.journal-ui .tab-content .tab-pane:last-child .navigator .btnNext {
+  pointer-events: none;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
 /* Slide 7 */
 .select-reason-boxs {
   -webkit-column-gap: 10px;
@@ -21667,6 +21805,14 @@ html, body {
 .reason-star .svg-line3 {
   width: 83%;
   top: 4px;
+}
+
+.reason-star .active path {
+  stroke: #00bb56;
+}
+
+.reason-star .active polygon {
+  fill: #00bb56;
 }
 
 .cell-number-box p {

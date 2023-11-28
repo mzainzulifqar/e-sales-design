@@ -3414,6 +3414,132 @@ html, body{
       }
   }
 }
+
+.journal-ui{
+  .journal-tabs{
+    display: flex;
+    align-items:center;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+  .tab-list{
+    width: 30%;
+    overflow-y: auto;
+    max-height: 570px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .nav-tabs{    
+    flex-direction: column;
+    border: none;
+    .nav-item{
+      margin-bottom: 8px;
+    }
+    .nav-link{
+      text-align: left;
+      background-color: rgba($pink-bg, 0.4);
+      color: $white;
+      font-weight: bold;
+      border-radius: 6px;      
+      &.active{
+        background-color: $pink-bg;
+      }
+    }
+  }
+  .tab-content{
+    width: 70%;
+    margin: 0 10px;
+    padding: 50px 30px;
+    background-color: $pink-bg;
+    height: 570px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: auto;
+    }
+    h4{
+      color: $white;
+    }
+    .answer{
+      border-radius: 10px 10px 0 0;
+      background-color: $white;
+      padding: 20px 30px;
+      textarea{
+        width: 100%;
+        height: 270px;
+        overflow-y: auto;
+        border: none;
+      }
+    }
+    .navigator{
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      background-color: #ddd;
+      border-radius: 0 0 10px 10px;
+      font-weight: bold;
+      font-size: 18px;
+      color: $white;
+      .que{}
+      .btnNext, .btnPrevious{
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        background-color: $primary;
+        position: relative;
+        cursor: pointer;
+        border: none;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+          top: 50%;
+          transform:translateY(-50%);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+      .btnPrevious{        
+        &:before{
+          border-right: 15px solid #ddd;
+        }
+      }
+      .btnNext{
+        &:before{
+          border-left: 15px solid #ddd;
+        }        
+      }
+    }
+    .tab-pane{
+      &:first-child{
+        .navigator{
+          .btnPrevious{
+            pointer-events: none;
+            background-color: $white;
+            opacity: 0.8;
+          }
+        }
+      }
+      &:last-child{
+        .navigator{
+          .btnNext{
+            pointer-events: none;
+            background-color: $white;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 /* Slide 7 */
 .select-reason-boxs{
     column-gap: 10px;
@@ -3488,6 +3614,14 @@ html, body{
   .svg-line3{
     width: 83%;
     top: 4px;
+  }
+  .active{
+    path{
+      stroke: #00bb56;
+    }
+    polygon{
+      fill: #00bb56;
+    }
   }
 }
 
