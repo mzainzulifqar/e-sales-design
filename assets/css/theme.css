@@ -21797,14 +21797,40 @@ html, body {
   top: 65px;
 }
 
+@media (max-width: 991.98px) {
+  .reason-star .svg-line1 {
+    width: 300px;
+    top: 65px;
+    right: 28px;
+    margin: 0 auto;
+  }
+}
+
 .reason-star .svg-line2 {
   width: 95%;
   top: 55px;
 }
 
+@media (max-width: 991.98px) {
+  .reason-star .svg-line2 {
+    width: 300px;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
 .reason-star .svg-line3 {
   width: 83%;
   top: 4px;
+}
+
+@media (max-width: 991.98px) {
+  .reason-star .svg-line3 {
+    width: 300px;
+    top: 4px;
+    right: 20px;
+    margin: 0 auto;
+  }
 }
 
 .reason-star .active path {

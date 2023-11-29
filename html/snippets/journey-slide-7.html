@@ -228,11 +228,7 @@ jQuery(document).ready(function($) {
     } else {
       $('#validation-message').text('');
     }
-
-
     changeReasonStarActive();
-
-
   });
 
   function changeReasonStarActive(){
@@ -241,47 +237,49 @@ jQuery(document).ready(function($) {
       if($(this).hasClass('active')){
         $('.reason-star .line').each(function(){
           if($(this).data('label') == data){
-            $(this).attr('class', 'active');
+            $(this).addClass('active');
           }
         });
       }
     })
-    
   }
-  function changeReasonStarDeActive(){
 
+  function changeReasonStarDeActive(){
     $('.reason').each(function(){
       var data = $(this).data('label');
       if(!$(this).hasClass('active')){
         // console.log('asdf', data);
         $('.reason-star .line').each(function(){
           if($(this).data('label') == data){
-            $(this).attr('class', 'line');
+            $(this).removeClass('active');
           }
         });
       }
     })
-    
   }
 
   $(".three-reasons .reason").click(function(){
-    var att_val2 =  $(this).attr('data-info');   
+    var att_val2 =  $(this).attr('data-info');
+    var att_val3 =  $(this).attr('data-label');
     $('.select-reason-boxs input[type="checkbox"]').each(function(){
       if(att_val2 == $(this).attr('id')){
         $(this).parent().removeClass('active');
         $(this).prop('checked', false);
       }
-      else{}
-    })
+    });
+
+    $('.reason-star .line').each(function(){
+      if(att_val3 == $(this).attr('data-label')){
+        $(this).removeClass('active');
+      }
+    });
 
      $(this).removeClass('active');
      $(this).text('');
-
   });
 
 
 });
-
 
 
 
