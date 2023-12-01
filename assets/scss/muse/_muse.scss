@@ -3806,3 +3806,56 @@ html, body{
   border: 2px solid $orange;
   border-radius: 5px;
 }
+
+.curve-image-grid{
+  img{
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+  }
+}
+.container-max{
+  @media(min-width: 1600px) {
+    max-width: 1470px;
+  }
+}
+.two-col-chas{
+  .container{
+    background-color: #f0f2f4;
+    border-radius: 30px;
+    padding: 60px 120px;
+    @include media-breakpoint-down(xl) {
+      padding: 60px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 30px;
+    }
+  }
+  .btn{
+    border: 2px solid $black;
+    padding: 14px 30px;
+    border-radius: 30px;
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+    &:hover{
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+.swiper-single{
+  overflow: hidden;
+}
+
+.cta-full{
+  .btn{
+    border: 2px solid $white;
+    color: $white;
+    border-radius: 30px;
+    &:hover{
+      background-color: $white;
+      color: $black;
+    }
+  }
+}

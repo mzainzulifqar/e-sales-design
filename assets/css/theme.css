@@ -22059,6 +22059,68 @@ html, body {
   border-radius: 5px;
 }
 
+.curve-image-grid img {
+  border-radius: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+@media (min-width: 1600px) {
+  .container-max {
+    max-width: 1470px;
+  }
+}
+
+.two-col-chas .container {
+  background-color: #f0f2f4;
+  border-radius: 30px;
+  padding: 60px 120px;
+}
+
+@media (max-width: 1199.98px) {
+  .two-col-chas .container {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .two-col-chas .container {
+    padding: 30px;
+  }
+}
+
+.two-col-chas .btn {
+  border: 2px solid #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+}
+
+@media (max-width: 767.98px) {
+  .two-col-chas .btn {
+    font-size: 14px;
+  }
+}
+
+.two-col-chas .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.swiper-single {
+  overflow: hidden;
+}
+
+.cta-full .btn {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.cta-full .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 @media (min-width: 992px) {
   .max-90 {
     padding-left: 50px;
