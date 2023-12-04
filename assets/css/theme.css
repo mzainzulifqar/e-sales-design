@@ -21501,6 +21501,10 @@ html, body {
   color: #F47C64;
 }
 
+.green-text {
+  color: #00bb56;
+}
+
 .journey-section {
   display: -ms-flexbox;
   display: flex;
